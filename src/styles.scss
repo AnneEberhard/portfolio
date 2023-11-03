@@ -6,8 +6,15 @@ body {
 }
 
 section {
-  padding-top:24px;
-  padding-bottom:24px;
+  padding-top:60px;
+  padding-bottom:60px;
+  gap: 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align:center;
 }
 
 .paddingStandardRight {
