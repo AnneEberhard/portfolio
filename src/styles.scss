@@ -5,9 +5,23 @@ body {
     color: white;
 }
 
-
 section {
-  padding: 24px 100px 24px 100px ;
+  padding-top:24px;
+  padding-bottom:24px;
+}
+
+.paddingStandardRight {
+  padding-right: 100px;
+}
+
+.paddingStandardLeft {
+  padding-left: 100px ;
+}
+
+h2 {
+  font-size: 72px;
+  font-weight: bold;
+  margin:0;
 }
 
 /*Fonts*/

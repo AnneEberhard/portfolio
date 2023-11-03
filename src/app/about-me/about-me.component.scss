@@ -1,7 +1,51 @@
+#aboutMe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutMeLeft {
+  padding-right: 60px;
+}
+
+.aboutMeInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  p {
+    padding:8px;
+  }
+}
+
+.aboutMeRight {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .headshot {
   height: 400px !important;
   width: 400px;
   border-radius: 0%;
   border-radius: 100%;
-  border: solid 1px #00bee8;
+  border: solid 4px #00bee8;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+
+  img {
+    height: 400px !important;
+
+  }
 }
+
+.line {
+  height: 4px;
+  width: 100px;
+  background-color: #00bee8;
+ }

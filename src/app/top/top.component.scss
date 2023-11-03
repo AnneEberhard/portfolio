@@ -28,23 +28,40 @@
   }
 }
 
-.topLeftBottom {
-  display: flex;
-  gap: 29px;
-  align-items: center;
-}
 
 .shadow {
   width: 30vw !important;
   object-fit: contain;
 }
 
+
+.topLeftBottomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ 
+.line {
+  height: 4px;
+  width: 100px;
+  background-color: #4B47FF;
+ }
+ 
+.topLeftBottomContent {
+  display: flex;
+  gap: 29px;
+  align-items: center;
+  padding-left: 42px;
+}
+
+
 .topRight {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60vw;
+  width: 50vw;
   gap:35px;
 
   button {
@@ -79,10 +96,8 @@
 }
 
 .name {
-  font-size: 72px;
-  font-weight: bold;
-  width: 100%;
   text-align-last: justify;
+  width: 100%;
 }
 
 .job {
