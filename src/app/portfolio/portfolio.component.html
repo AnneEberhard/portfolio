@@ -1,8 +1,40 @@
 <section id="portfolio">
+  <div class="portfolioHeader">
+    <div class="portfolioHeaderTop">
+      <div class="line"></div>
+      <h2>Portfolio</h2>
+      <div class="lineWide"></div>
+    </div>
+    <p>
+      Please find below a sample of my work. Links lead either to the code on
+      github or a live test.
+    </p>
+  </div>
+  <div
+    class="singlePortfolio"
+    *ngFor="let item of portfolio; let i = index"
+    [ngClass]="{ swapOrder: i % 2 !== 0 }"
+  >
     <div class="portfolioLeft">
-        <img src="" alt="">
+      <img src="{{ item.image }}" alt="screenshot" />
     </div>
-    <div class="portfolioRight">
-     <h3> </h3>
+    <div class="portfolioRight" [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
+      <h3>{{ item.header }}</h3>
+      <span>{{ item.subheader }}</span>
+      <p>
+        {{ item.text }}
+      </p>
+      <div class="portfolioButtons">
+        <a target="_blank" href="{{ item.linkLive }}" class="buttonLive"
+          >Live Test</a
+        >
+        <a target="_blank" href="{{ item.linkGit }}" class="buttonGit"
+          >GitHub</a
+        >
+      </div>
     </div>
-  </section>
+  </div>
+  <div class="shadowBox">
+    <img class="portfolioShadow" src="assets/img/shadows/blue2.png" />
+  </div>
+</section>

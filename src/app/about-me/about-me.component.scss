@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.aboutMeLeft {
-
-}
-
 .aboutMeInfo {
   display: flex;
   justify-content: center;
@@ -36,6 +32,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 99;
 
 
   img {
@@ -48,4 +45,11 @@
   height: 4px;
   width: 100px;
   background-color: #00bee8;
+  z-index: 98;
+ }
+
+ .aboutMeShadow {
+  position: absolute;
+  right:0;
+  transform: rotate(180deg);
  }

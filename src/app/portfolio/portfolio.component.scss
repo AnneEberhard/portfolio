@@ -1,0 +1,124 @@
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.portfolioHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.portfolioHeaderTop {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    background-color: #141d2f;
+    z-index: 99;
+    padding: 20px;
+  }
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+  background-color: #4b47ff;
+}
+
+.lineWide {
+  height: 4px;
+  width: 400px;
+  background-color: #4b47ff;
+  position: absolute;
+  right: 0;
+}
+
+.singlePortfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.portfolioLeft {
+  z-index: 99;
+  img {
+    width: 30vw;
+  }
+}
+
+.portfolioRight {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  z-index: 99;
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #00bee8;
+  }
+
+  p {
+    margin-bottom: 35px;
+  }
+}
+
+.portfolioButtons {
+  display: flex;
+  justify-content: space-evenly !important;
+  align-items: center;
+  width: 100%;
+
+  a {
+    border-radius: 10px;
+    padding: 15px 30px 15px 30px;
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      width: 160px;
+      height: 48px;
+    }
+  }
+}
+
+.buttonLive {
+  background-color: #4b47ff;
+  border: none;
+}
+
+.buttonGit {
+  background-color: transparent;
+  border: solid 2px #00bee8;
+}
+
+.swapOrder {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.alignFlexEnd {
+  align-items: flex-end;
+}
+
+.portfolioShadow {
+  position: absolute;
+  width: 636px;
+  height: 748.73px;
+  top: 3045.83px;
+  left: -100px;
+}
