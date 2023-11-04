@@ -33,6 +33,22 @@
   width: 40vw !important;
 }
 
+.topShadow {
+  background-image: url(/assets/img/shadows/purple-petrol.png);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width:500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolioImage {
+  height: 300px;
+  width: 352px !important;
+  margin-left: 100px;
+}
 
 .topLeftBottomContainer {
   display: flex;

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
 
   portfolio = [{
-    image:'assets/img/Pollo loco.png',
+    image:'assets/img/join.png',
     header: 'Join',
     subheader: 'Javascript | HTML | CSS',
     text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas',
@@ -24,7 +24,7 @@ export class PortfolioComponent {
     linkGit:'https://github.com/AnneEberhard/ElPolloLoco'
   }
 ,{
-  image:'assets/img/Pollo loco.png',
+  image:'assets/img/portfolio.png',
   header: 'Simple CRM',
   subheader: 'Angular | Firebase | Javascript | HTML | CSS',
   text:'tbd.',
@@ -32,7 +32,7 @@ export class PortfolioComponent {
   linkGit:''
 },
 {
-  image:'assets/img/Pollo loco.png',
+  image:'assets/img/booksta.png',
   header: 'Bookstagram',
   subheader: 'Javascript | HTML | CSS',
   text:'A bookstagram page based on Instagram.',
