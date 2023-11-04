@@ -3,6 +3,24 @@
         <p>contact works!</p>
     </div>
     <div class="contactRight">
-     
+        <form #contactForm
+        (submit)="sendMail()"
+        ngNativeValidate
+      >
+      <label>
+        Your Name:
+        <input required type="text" name="name" #nameField>
+      </label>
+        <label>
+          Your email:
+          <input required type="email" name="email" #emailField>
+        </label>
+        <label>
+          Your message:
+          <textarea required name="message" #messageField></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit" #sendButton>Send</button>
+      </form>
     </div>
   </section>
