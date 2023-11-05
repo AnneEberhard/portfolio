@@ -15,7 +15,7 @@
    
   </div>
   <div class="contactRight paddingStandardRight">
-    <form #contactForm (submit)="sendMail()" ngNativeValidate>
+    <form #contactForm (submit)="sendMail($event)" ngNativeValidate>
       <input placeholder="Your name" class="alignCenter" required type="text" name="name" #nameField />
       <input placeholder="Your email" class="alignCenter" required type="email" name="email" #emailField />     
       <textarea placeholder="Your message" required name="message" #messageField ></textarea>
