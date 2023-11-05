@@ -13,6 +13,9 @@ export class ContactComponent implements OnInit {
     @ViewChild('sendButton') sendButtonElement!: ElementRef;
     @ViewChild('privacyContainerBox') privacyContainerBoxElement!: ElementRef;
     @ViewChild('privacyAlert') privacyAlertElement!: ElementRef;
+    @ViewChild('nameAlert') nameAlertElement!: ElementRef;
+    @ViewChild('emailAlert') emailAlertElement!: ElementRef;
+    @ViewChild('messageAlert') messageAlertElement!: ElementRef;
 
     private privacyChecked = false;
     nameField: any;
@@ -21,29 +24,16 @@ export class ContactComponent implements OnInit {
     sendButton: any;
     privacyContainerBox: any;
     privacyAlert: any;
+    nameAlert: any;
+    emailAlert: any;
+    messageAlert: any;
+
+    // fieldsfilled: boolean = false;
 
     async ngOnInit() {
         setTimeout(() => {
             this.assignFields();
         }, 100);
-    }
-
-    async sendMail(event: Event) {
-        event.preventDefault();
-        const data = this.collectdata();
-        this.disableFields();
-        this.sendAnimation();
-        await fetch("https://formspree.io/f/xwkdzbgo", {
-            method: "POST",
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(() => {
-            this.messageSend();
-            this.enableFields();
-        }).catch((error) => {
-            console.log(error);
-        });
-        this.clearFields()
     }
 
     assignFields() {
@@ -52,7 +42,30 @@ export class ContactComponent implements OnInit {
         this.messageField = this.messageFieldElement.nativeElement;
         this.sendButton = this.sendButtonElement.nativeElement;
         this.privacyContainerBox = this.privacyContainerBoxElement.nativeElement
-        this.privacyAlert = this.privacyAlertElement.nativeElement
+        this.privacyAlert = this.privacyAlertElement.nativeElement;
+        this.nameAlert = this.nameAlertElement.nativeElement
+        this.emailAlert = this.emailAlertElement.nativeElement
+        this.messageAlert = this.messageAlertElement.nativeElement
+    }
+
+    async sendMail(event: Event) {
+        event.preventDefault();
+        if (this.fieldsFilled()) {
+            const data = this.collectdata();
+            this.disableFields();
+            this.sendAnimation();
+            await fetch("https://formspree.io/f/xwkdzbgo", {
+                method: "POST",
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(() => {
+                this.messageSend();
+                this.enableFields();
+            }).catch((error) => {
+                console.log(error);
+            });
+            this.clearFields()
+        }
     }
 
     collectdata() {
@@ -91,7 +104,7 @@ export class ContactComponent implements OnInit {
         console.log('message send')
     }
 
-   checkPrivacy() {
+    checkPrivacy() {
         if (!this.privacyChecked) {
             this.privacyContainerBox.innerHTML = '<img src="assets/img/icons/checkmarkPetrol.png" class="checkmark">';
             this.sendButton.disabled = false;
@@ -107,4 +120,35 @@ export class ContactComponent implements OnInit {
         }
     }
 
+    fieldsFilled() {
+        this.checkFields(this.nameField, this.nameAlert);
+        this.checkFields(this.emailField, this.emailAlert);
+        this.checkFields(this.messageField, this.messageAlert);
+        if (this.nameField.value.trim() !== '' &&
+            this.emailField.value.trim() !== '' &&
+            this.messageField.value.trim() !== '') {
+            console.log('fields filled')
+            return true;
+        } else {
+            console.log('fields not filled')
+            return false;
+        }
+    }
+
+    checkFields(field: any, alertElement: any) {
+        const fieldElement = field;
+        const alert = alertElement;
+        console.log('check fields');
+        if (fieldElement.value.trim() !== '') {
+            fieldElement.classList.remove('fieldAlert');
+            alert.style.display = 'none';
+            console.log(fieldElement);
+            console.log(' not empty');
+        } else {
+            fieldElement.classList.add('fieldAlert');
+            alert.style.display = 'block';
+            console.log(fieldElement);
+            console.log('empty');
+        }
+    }
 }

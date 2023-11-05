@@ -84,7 +84,6 @@
       box-sizing: border-box;
       background-color: transparent;
       height: 340px;
-      color: rgba(112, 230, 28, 1);
       font-family: "Poppins";
 
       &::placeholder {
@@ -136,12 +135,16 @@
   }
 }
 
-#privacyAlert {
+.alert {
   font-size: 14px;
   text-align: left;
   color: red;
   width: 100%;
   margin-bottom: 12px;
+}
+
+.fieldAlert {
+  border: solid 1px red !important;
 }
 
 .hoverButton {

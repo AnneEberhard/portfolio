@@ -16,14 +16,21 @@
   </div>
   <div class="contactRight paddingStandardRight">
     <form #contactForm (submit)="sendMail($event)" ngNativeValidate>
-      <input placeholder="Your name" class="alignCenter" required type="text" name="name" #nameField />
-      <input placeholder="Your email" class="alignCenter" required type="email" name="email" #emailField />     
-      <textarea placeholder="Your message" required name="message" #messageField ></textarea>
+      <input placeholder="Your name" class="alignCenter" type="text" name="name" #nameField />
+      <div #nameAlert class="alert" style="display: none;">Your name is required</div>
+
+      <input placeholder="Your email" class="alignCenter" type="email" name="email" #emailField /> 
+      <div #emailAlert class="alert" style="display: none;">Your email is required</div>
+
+      <textarea placeholder="Your message" name="message" #messageField ></textarea>
+      <div #messageAlert class="alert" style="display: none;">Your message is empty</div>
+
       <div id="privacyContainer">
         <div  #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()" ></div>
         <p>I've read the  <a routerLink="privacy-police">privacy police</a> and agree to the progressing of my data as outlined.</p>
       </div>
-      <div #privacyAlert id="privacyAlert" style="display: none;">Please accept the privacy police</div>
+      <div #privacyAlert class="alert" style="display: none;">Please accept the privacy police</div>
+
       <button type="submit" #sendButton disabled>Send message</button>
     </form>
   </div>
