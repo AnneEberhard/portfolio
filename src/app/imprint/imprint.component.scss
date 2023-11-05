@@ -1,17 +1,30 @@
 .imprint {
-    padding: 16px;
+  padding: 16px;
 
-    h2 {
-        font-size: 24px !important;
+  h2 {
+    font-size: 24px !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: #4b47ff;
+    cursor: pointer;
+
+    &:hover {
+      color: #00bee8;
     }
+  }
+}
 
-    a {
-        text-decoration: none;
-        color: #4b47ff;
-        cursor: pointer;
+.imprintHeader {
+  display: flex;
+  justify-content: space-between;
 
-        &:hover {
-            color: #00bee8;
-        }
+  a {
+    img:hover {
+      box-shadow: 1px 1px 4px 4px rgba(0, 190, 232, 0.2);
+      background-color: rgba(0, 190, 232, 0.2);
+      transform: scale(1.1);
     }
+  }
 }

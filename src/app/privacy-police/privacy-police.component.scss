@@ -15,3 +15,15 @@
         }
     }
 }
+
+.privacyHeader {
+    display: flex;
+    justify-content: space-between;
+  
+    a {
+      img:hover {
+        box-shadow: 1px 1px 4px 4px rgba(0, 190, 232, 0.2);
+        background-color: rgba(0, 190, 232, 0.2);
+        transform: scale(1.1);
+      }
+    }}
