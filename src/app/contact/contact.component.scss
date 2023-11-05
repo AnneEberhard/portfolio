@@ -55,13 +55,23 @@
       box-sizing: border-box;
       background-color: transparent;
       height: 50px;
-      color: white;
+      color: rgba(112, 230, 28, 1);
    
 
       &::placeholder {
         color: white;
         font-family: "Poppins";
       }
+
+      &:focus-visible {
+        border: solid 1px rgba(112, 230, 28, 1) !important;
+        outline: none;
+        background-color: transparent;
+      }
+
+      &:visited {
+        border: solid 1px rgba(112, 230, 28, 1) !important;
+    }
     }
 
     textarea {
@@ -74,11 +84,17 @@
       box-sizing: border-box;
       background-color: transparent;
       height: 340px;
-      color: white;
+      color: rgba(112, 230, 28, 1);
+      font-family: "Poppins";
 
       &::placeholder {
         color: white;
         font-family: "Poppins";
+      }
+
+      &:focus-visible {
+        border: solid 1px rgba(112, 230, 28, 1) !important;
+        outline: none;
       }
     }
 
