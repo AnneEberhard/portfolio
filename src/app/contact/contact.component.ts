@@ -18,7 +18,6 @@ export class ContactComponent {
  private privacyChecked = false;  
 
  async sendMail(){
-  console.log('begin')
   let nameField = this.nameField.nativeElement; 
   let emailField = this.emailField.nativeElement;
   let messageField =  this.messageField.nativeElement;

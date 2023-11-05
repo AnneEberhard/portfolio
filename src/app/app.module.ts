@@ -12,6 +12,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     MySkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    MainPageComponent
+    MainPageComponent,
+    PrivacyPoliceComponent
   ],
   imports: [
     BrowserModule,

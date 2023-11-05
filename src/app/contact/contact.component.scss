@@ -44,26 +44,41 @@
     align-items: center;
     gap: 10px;
 
-    label {
+    input {
       border: solid 1px #4b47ff;
       border-radius: 10px;
       padding: 15px 25px 15px 25px;
       display: flex;
-      gap: 2px;
+      gap: 4px;
       font-size: 16px;
       width: 100%;
       box-sizing: border-box;
+      background-color: transparent;
+      height: 50px;
+      color: white;
+   
 
-      input {
-        background-color: transparent;
-        border: none;
-        height: 50px;
+      &::placeholder {
+        color: white;
+        font-family: "Poppins";
       }
+    }
 
-      textarea {
-        background-color: transparent;
-        border: none;
-        height: 340px;
+    textarea {
+      border: solid 1px #4b47ff;
+      border-radius: 10px;
+      padding: 15px 25px 15px 25px;
+      gap: 4px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+      height: 340px;
+      color: white;
+
+      &::placeholder {
+        color: white;
+        font-family: "Poppins";
       }
     }
 
@@ -100,25 +115,25 @@
   border: solid 2px #00bee8;
   cursor: pointer;
   &:hover {
-    box-shadow: 1px 1px 20px 10px rgba(0, 190, 232, .2);
-    background-color: rgba(0, 190, 232, .2);
+    box-shadow: 1px 1px 20px 10px rgba(0, 190, 232, 0.2);
+    background-color: rgba(0, 190, 232, 0.2);
   }
 }
 
-#privacyAlert{
-    font-size: 14px;
-    text-align: left;
-    color: red;
-    width: 100%;
-    margin-bottom: 12px;;
+#privacyAlert {
+  font-size: 14px;
+  text-align: left;
+  color: red;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 .hoverButton {
-    cursor: pointer;
+  background-color: #00bee8 !important;
+  cursor: pointer;
 
-    &:hover {
-      transform: scale(1.1);
-      background-color: #00bee8;
-    }
-
+  &:hover {
+    transform: scale(1.1);
+    background-color: #00bee8;
+  }
 }
