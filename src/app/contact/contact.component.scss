@@ -77,13 +77,6 @@
       align-items: center;
       justify-content: center;
       background-color: #b6b6b6;
-
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.1);
-        background-color: #00bee8;
-      }
     }
   }
 }
@@ -103,6 +96,29 @@
 
 #privacyContainerBox {
   height: 24px;
-  width: 24px;
+  width: 28px;
   border: solid 2px #00bee8;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 1px 20px 10px rgba(0, 190, 232, .2);
+    background-color: rgba(0, 190, 232, .2);
+  }
+}
+
+#privacyAlert{
+    font-size: 14px;
+    text-align: left;
+    color: red;
+    width: 100%;
+    margin-bottom: 12px;;
+}
+
+.hoverButton {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #00bee8;
+    }
+
 }

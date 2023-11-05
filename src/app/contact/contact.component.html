@@ -29,10 +29,12 @@
         <textarea required name="message" #messageField ></textarea>
       </label>
       <div id="privacyContainer">
-        <div id="privacyContainerBox"></div>
+        <div  #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()" ></div>
         <p>I've read the <a>privacy police</a> and agree to the progressing of my data as outlined.</p>
       </div>
-      <button type="submit" #sendButton>Send message</button>
+      <div #privacyAlert id="privacyAlert" style="display: none;">Please accept the privacy police</div>
+      <button type="submit" #sendButton disabled>Send message</button>
+  
     </form>
   </div>
   </div>

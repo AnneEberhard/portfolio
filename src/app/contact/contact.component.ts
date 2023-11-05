@@ -7,13 +7,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
- @ViewChild('contactForm') contactForm! : any; //ElementRef
- @ViewChild('nameField') nameField! : any; //ElementRef
- @ViewChild('emailField') emailField! : any; //ElementRef
- @ViewChild('messageField') messageField! : any; //ElementRef
- @ViewChild('sendButton') sendButton! : any; //ElementRef
+ @ViewChild('contactForm') contactForm! : ElementRef;
+ @ViewChild('nameField') nameField! : any;
+ @ViewChild('emailField') emailField! : any;
+ @ViewChild('messageField') messageField! : ElementRef;
+ @ViewChild('sendButton') sendButton! : ElementRef;
+ @ViewChild('privacyContainerBox') privacyContainerBox!: ElementRef;
+ @ViewChild('privacyAlert') privacyAlert!: ElementRef;
 
-   
+ private privacyChecked = false;  
+
  async sendMail(){
   console.log('begin')
   let nameField = this.nameField.nativeElement; 
@@ -46,6 +49,22 @@ export class ContactComponent {
     }).catch((error) => {
         console.log(error);
     });
+}
+
+checkPrivacy() {
+    if (!this.privacyChecked) {
+        this.privacyContainerBox.nativeElement.innerHTML = '<img src="assets/img/icons/checkmarkPetrol.png" class="checkmark">';
+        this.sendButton.nativeElement.disabled = false;
+        this.sendButton.nativeElement.classList.add('hoverButton');
+        this.privacyChecked = true;
+        this.privacyAlert.nativeElement.style.display = 'none';
+      } else {
+        this.privacyContainerBox.nativeElement.innerHTML = '';
+        this.sendButton.nativeElement.disabled = true;
+        this.sendButton.nativeElement.classList.remove('hoverButton');
+        this.privacyChecked = false;
+        this.privacyAlert.nativeElement.style.display = 'block';
+      }
 }
 
 }
