@@ -1,0 +1,108 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.line {
+  height: 4px;
+  width: 80px;
+  margin-right: 20px;
+  background-color: #4b47ff;
+}
+
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+
+  h3 {
+    color: white !important;
+    padding-left: 100px;
+  }
+
+  p {
+    padding-left: 100px;
+  }
+}
+
+.contactLeftHeader {
+  display: flex;
+  align-items: center;
+}
+
+.contactRight {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    label {
+      border: solid 1px #4b47ff;
+      border-radius: 10px;
+      padding: 15px 25px 15px 25px;
+      display: flex;
+      gap: 2px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+
+      input {
+        background-color: transparent;
+        border: none;
+        height: 50px;
+      }
+
+      textarea {
+        background-color: transparent;
+        border: none;
+        height: 340px;
+      }
+    }
+
+    button {
+      border-radius: 10px;
+      padding: 15px 30px 15px 30px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #b6b6b6;
+
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #00bee8;
+      }
+    }
+  }
+}
+
+#privacyContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  a {
+    color: #4b47ff;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+#privacyContainerBox {
+  height: 24px;
+  width: 24px;
+  border: solid 2px #00bee8;
+}

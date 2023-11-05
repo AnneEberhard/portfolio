@@ -24,7 +24,7 @@
       <p>
         {{ item.text }}
       </p>
-      <div class="portfolioButtons">
+      <div class="portfolioButtons" [ngClass]="{ justifyFlexEnd: i % 2 !== 0 }">
         <a target="_blank" href="{{ item.linkLive }}" class="buttonLive"
           >Live Test</a
         >
@@ -35,6 +35,8 @@
     </div>
   </div>
   <div class="shadowBox">
-    <img class="portfolioShadow" src="assets/img/shadows/blue2.png" />
+    <img class="portfolioShadow1" src="assets/img/shadows/blue2.png" />
   </div>
+
 </section>
+<img class="portfolioShadow2" src="assets/img/shadows/petrol2.png">

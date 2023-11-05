@@ -33,7 +33,7 @@
 
 .lineWide {
   height: 4px;
-  width: 400px;
+  width: 600px;
   background-color: #4b47ff;
   position: absolute;
   right: 0;
@@ -71,7 +71,7 @@
 
 .portfolioButtons {
   display: flex;
-  justify-content: space-evenly !important;
+  gap:40px;
   align-items: center;
   width: 100%;
 
@@ -83,15 +83,14 @@
     color: white;
     font-size: 22px;
     text-decoration: none;
-    justify-content: center;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     cursor: pointer;
 
     &:hover {
-      width: 160px;
-      height: 48px;
+      transform: scale(1.1);
     }
   }
 }
@@ -115,10 +114,22 @@
   align-items: flex-end;
 }
 
-.portfolioShadow {
+.justifyFlexEnd {
+  justify-content: flex-end !important;
+}
+
+.portfolioShadow1 {
   position: absolute;
   width: 636px;
   height: 748.73px;
-  top: 3045.83px;
+  top: 2500px;
   left: -100px;
+}
+
+.portfolioShadow2 {
+  position: absolute;
+  width: 636px;
+  height: 748.73px;
+  top: 3000px;
+  right: 0px;
 }

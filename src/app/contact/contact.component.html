@@ -1,26 +1,39 @@
 <section id="contact">
-    <div class="contactLeft">
-        <p>contact works!</p>
-    </div>
-    <div class="contactRight">
-        <form #contactForm
-        (submit)="sendMail()"
-        ngNativeValidate
-      >
+  <div class="contactLeftHeader">
+    <div class="line"></div>
+    <h2>Contact</h2>
+  </div>
+  <div class="contactContent">
+  <div class="contactLeft">
+
+      <h3>Interested to learn more?</h3>
+      <p>
+        Contact me through this form if you like to hear more, have a problem to
+        solve or an idea to pursue. I am interested to learn about your projects
+        and how I could contribute to them.
+      </p>
+   
+  </div>
+  <div class="contactRight paddingStandardRight">
+    <form #contactForm (submit)="sendMail()" ngNativeValidate>
       <label>
-        Your Name:
-        <input required type="text" name="name" #nameField>
+        Your Name
+        <input required type="text" name="name" #nameField />
       </label>
-        <label>
-          Your email:
-          <input required type="email" name="email" #emailField>
-        </label>
-        <label>
-          Your message:
-          <textarea required name="message" #messageField></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit" #sendButton>Send</button>
-      </form>
-    </div>
-  </section>
+      <label>
+        Your email
+        <input required type="email" name="email" #emailField />
+      </label>
+      <label class="column">
+        Your message
+        <textarea required name="message" #messageField ></textarea>
+      </label>
+      <div id="privacyContainer">
+        <div id="privacyContainerBox"></div>
+        <p>I've read the <a>privacy police</a> and agree to the progressing of my data as outlined.</p>
+      </div>
+      <button type="submit" #sendButton>Send message</button>
+    </form>
+  </div>
+  </div>
+</section>

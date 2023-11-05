@@ -19,7 +19,7 @@ export class PortfolioComponent {
     image:'assets/img/Pollo loco.png',
     header: 'El Pollo Loco',
     subheader: 'Javascript | HTML | CSS',
-    text:'A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chicks.',
+    text:'A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.',
     linkLive:'http://anne-eberhard.developerakademie.net/ElPolloLoco/index.html',
     linkGit:'https://github.com/AnneEberhard/ElPolloLoco'
   }

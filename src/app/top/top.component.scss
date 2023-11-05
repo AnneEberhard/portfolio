@@ -12,7 +12,7 @@
     width: 30px;
 
     &:hover {
-      width: 36px;
+      transform: scale(1.1);
     }
   }
 
@@ -92,8 +92,7 @@
 
         &:hover {
             background-color:  #4b47ff;
-            width: 180px;
-            height: 64px;
+            transform: scale(1.1);
         }
   }
 }
