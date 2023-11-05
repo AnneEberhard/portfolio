@@ -21,7 +21,7 @@
       <textarea placeholder="Your message" required name="message" #messageField ></textarea>
       <div id="privacyContainer">
         <div  #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()" ></div>
-        <p>I've read the <a>privacy police</a> and agree to the progressing of my data as outlined.</p>
+        <p>I've read the  <a routerLink="privacy-police">privacy police</a> and agree to the progressing of my data as outlined.</p>
       </div>
       <div #privacyAlert id="privacyAlert" style="display: none;">Please accept the privacy police</div>
       <button type="submit" #sendButton disabled>Send message</button>
