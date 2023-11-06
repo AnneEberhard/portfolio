@@ -1,11 +1,11 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements  AfterViewInit {
     @ViewChild('contactForm') contactFormElement!: ElementRef;
     @ViewChild('nameField') nameFieldElement!: ElementRef;
     @ViewChild('emailField') emailFieldElement!: ElementRef;
@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
     @ViewChild('emailAlert') emailAlertElement!: ElementRef;
     @ViewChild('messageAlert') messageAlertElement!: ElementRef;
 
-   
+
     nameField: any;
     emailField: any;
     messageField: any;
@@ -28,17 +28,17 @@ export class ContactComponent implements OnInit {
     emailAlert: any;
     messageAlert: any;
 
+    sendMessage = 'Send message'
+
     privacyChecked: boolean = false;
     showPrivacyAlert: boolean = false;
     showNameAlert: boolean = false;
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
 
-    async ngOnInit() {
-        setTimeout(() => {
-            this.assignFields();
-        }, 100);
-    }
+    ngAfterViewInit() {
+          this.assignFields();
+      }
 
     assignFields() {
         this.nameField = this.nameFieldElement?.nativeElement;
@@ -58,19 +58,27 @@ export class ContactComponent implements OnInit {
             const data = this.collectdata();
             this.disableFields();
             this.sendAnimation();
-            await fetch("https://formspree.io/f/xwkdzbgo", {
-                method: "POST",
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(() => {
-                this.messageSend();
-                this.enableFields();
-            }).catch((error) => {
-                console.log(error);
-            });
-            this.clearFields()
+            try {
+                const response = await fetch("https://formspree.io/f/xwkdzbgo", {
+                    method: "POST",
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    this.messageSend();
+                    this.clearFields();
+                    this.enableFields();
+                } else {
+                    console.error(`HTTP error! status: ${response.status}`);
+                    this.enableFields();
+                    this.showAlert('email');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
         }
     }
+    
 
     collectdata() {
         const data = new FormData();
@@ -81,31 +89,39 @@ export class ContactComponent implements OnInit {
     }
 
     disableFields() {
-        this.nameField.disabled = false;
-        this.emailField.disabled = false;
-        this.messageField.disabled = false;
-        this.sendButton.disabled = false;
-    }
-
-    enableFields() {
         this.nameField.disabled = true;
         this.emailField.disabled = true;
         this.messageField.disabled = true;
         this.sendButton.disabled = true;
     }
 
+    enableFields() {
+        this.nameField.disabled = false;
+        this.emailField.disabled = false;
+        this.messageField.disabled = false;
+        this.sendButton.disabled = false;
+    }
+
     clearFields() {
         this.nameField.value = '';
         this.emailField.value = '';
         this.messageField.value = '';
+        this.nameField.classList.remove('filled');
+        this.emailField.classList.remove('filled');
+        this.messageField.classList.remove('filled');
     }
 
     sendAnimation() {
         console.log('animation')
+        this.sendMessage = 'Sending...';
     }
 
     messageSend() {
-        console.log('message send')
+        console.log('message send');
+        this.sendMessage = 'Message sent';
+        setTimeout(() => {
+            this.sendMessage = 'Send message';
+        }, 2000);
     }
 
     checkPrivacy() {
@@ -115,14 +131,12 @@ export class ContactComponent implements OnInit {
             this.sendButton.classList.add('hoverButton');
             this.privacyChecked = true;
             this.showPrivacyAlert = false;
-
         } else {
             this.privacyContainerBox.innerHTML = '';
             this.sendButton.disabled = true;
             this.sendButton.classList.remove('hoverButton');
             this.privacyChecked = false;
             this.showPrivacyAlert = true;
-    
         }
     }
 
@@ -131,10 +145,8 @@ export class ContactComponent implements OnInit {
         let emailFieldCheck = this.checkFieldsFilled(this.emailField, 'email');
         let messageFieldCheck = this.checkFieldsFilled(this.messageField, 'message');
         if (nameFieldCheck && emailFieldCheck && messageFieldCheck) {
-            console.log('fields filled')
             return true;
         } else {
-            console.log('fields not filled')
             return false;
         }
     }
@@ -143,7 +155,7 @@ export class ContactComponent implements OnInit {
         if (field) {
             if (field.value.trim() !== '') {
                 field.classList.remove('fieldAlert');
-                this.HideAlert(id);
+                this.hideAlert(id);
                 return true;
             } else {
                 field.classList.add('fieldAlert');
@@ -157,11 +169,8 @@ export class ContactComponent implements OnInit {
     }
 
     showAlert(id: string) {
-        console.log('field Alert')
         if (id == 'name') {
-            console.log(id, this.showNameAlert)
             this.showNameAlert = true;
-            console.log(id, this.showNameAlert)
         }
         if (id == 'email') {
             this.showEmailAlert = true;
@@ -171,7 +180,7 @@ export class ContactComponent implements OnInit {
         }
     }
 
-    HideAlert(id: string) {
+    hideAlert(id: string) {
         if (id == 'name') {
             this.showNameAlert = false;
         }
@@ -185,12 +194,37 @@ export class ContactComponent implements OnInit {
 
     checkInputFields(event: Event) {
         const target = event.target as HTMLInputElement;
+        const id = target.name.toString();
         if (target.name === 'email') {
-            this.checkEmail();
+            if (this.checkEmail()) {
+                target.classList.add('filled');
+                this.hideAlert(id);
+            };
         } else {
             target.classList.add('filled');
+            this.hideAlert(id);
         }
     }
+
+    checkEmail() {
+        const emailValue = this.emailField.value;
+        const atIndex = emailValue.indexOf('@');
+        if (atIndex === -1) {
+            return false; 
+        }
+        const beforeAt = emailValue.substring(0, atIndex);
+        const afterAt = emailValue.substring(atIndex + 1);
+        const regex = /^[a-zA-Z]{2,}$/;   
+        if (regex.test(beforeAt) && regex.test(afterAt)) {
+            console.log('true');
+            return true; 
+        } else {
+            return false; 
+        }
+    }
+    
+    
+
 
     addFilledClass(event: Event, alertElement: HTMLElement) {
         const target = event.target as HTMLInputElement;
@@ -198,17 +232,12 @@ export class ContactComponent implements OnInit {
             this.checkEmail();
         } else {
             target.classList.add('filled');
-            this.hideAlert(alertElement);
+            this.hideAlert2(alertElement);
         }
     }
 
 
-    checkEmail() {
-        const emailField = this.emailField.nativeElement;
-        this.showEmailAlert = !emailField.value.includes('@');
-    }
-
-    hideAlert(alertElement: HTMLElement) {
+    hideAlert2(alertElement: HTMLElement) {
         alertElement.style.display = 'none';
     }
 
