@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
     @ViewChild('emailAlert') emailAlertElement!: ElementRef;
     @ViewChild('messageAlert') messageAlertElement!: ElementRef;
 
-    private privacyChecked = false;
+   
     nameField: any;
     emailField: any;
     messageField: any;
@@ -28,7 +28,11 @@ export class ContactComponent implements OnInit {
     emailAlert: any;
     messageAlert: any;
 
-    // fieldsfilled: boolean = false;
+    privacyChecked: boolean = false;
+    showPrivacyAlert: boolean = false;
+    showNameAlert: boolean = false;
+    showEmailAlert: boolean = false;
+    showMessageAlert: boolean = false;
 
     async ngOnInit() {
         setTimeout(() => {
@@ -37,15 +41,15 @@ export class ContactComponent implements OnInit {
     }
 
     assignFields() {
-        this.nameField = this.nameFieldElement.nativeElement;
-        this.emailField = this.emailFieldElement.nativeElement;
-        this.messageField = this.messageFieldElement.nativeElement;
-        this.sendButton = this.sendButtonElement.nativeElement;
-        this.privacyContainerBox = this.privacyContainerBoxElement.nativeElement
-        this.privacyAlert = this.privacyAlertElement.nativeElement;
-        this.nameAlert = this.nameAlertElement.nativeElement
-        this.emailAlert = this.emailAlertElement.nativeElement
-        this.messageAlert = this.messageAlertElement.nativeElement
+        this.nameField = this.nameFieldElement?.nativeElement;
+        this.emailField = this.emailFieldElement?.nativeElement;
+        this.messageField = this.messageFieldElement?.nativeElement;
+        this.sendButton = this.sendButtonElement?.nativeElement;
+        this.privacyContainerBox = this.privacyContainerBoxElement?.nativeElement;
+        this.privacyAlert = this.privacyAlertElement?.nativeElement;
+        this.nameAlert = this.nameAlertElement?.nativeElement;
+        this.emailAlert = this.emailAlertElement?.nativeElement;
+        this.messageAlert = this.messageAlertElement?.nativeElement;
     }
 
     async sendMail(event: Event) {
@@ -110,23 +114,23 @@ export class ContactComponent implements OnInit {
             this.sendButton.disabled = false;
             this.sendButton.classList.add('hoverButton');
             this.privacyChecked = true;
-            this.privacyAlert.style.display = 'none';
+            this.showPrivacyAlert = false;
+
         } else {
             this.privacyContainerBox.innerHTML = '';
             this.sendButton.disabled = true;
             this.sendButton.classList.remove('hoverButton');
             this.privacyChecked = false;
-            this.privacyAlert.style.display = 'block';
+            this.showPrivacyAlert = true;
+    
         }
     }
 
     fieldsFilled() {
-        this.checkFields(this.nameField, this.nameAlert);
-        this.checkFields(this.emailField, this.emailAlert);
-        this.checkFields(this.messageField, this.messageAlert);
-        if (this.nameField.value.trim() !== '' &&
-            this.emailField.value.trim() !== '' &&
-            this.messageField.value.trim() !== '') {
+        let nameFieldCheck = this.checkFieldsFilled(this.nameField, 'name');
+        let emailFieldCheck = this.checkFieldsFilled(this.emailField, 'email');
+        let messageFieldCheck = this.checkFieldsFilled(this.messageField, 'message');
+        if (nameFieldCheck && emailFieldCheck && messageFieldCheck) {
             console.log('fields filled')
             return true;
         } else {
@@ -135,20 +139,78 @@ export class ContactComponent implements OnInit {
         }
     }
 
-    checkFields(field: any, alertElement: any) {
-        const fieldElement = field;
-        const alert = alertElement;
-        console.log('check fields');
-        if (fieldElement.value.trim() !== '') {
-            fieldElement.classList.remove('fieldAlert');
-            alert.style.display = 'none';
-            console.log(fieldElement);
-            console.log(' not empty');
+    checkFieldsFilled(field: any, id: string) {
+        if (field) {
+            if (field.value.trim() !== '') {
+                field.classList.remove('fieldAlert');
+                this.HideAlert(id);
+                return true;
+            } else {
+                field.classList.add('fieldAlert');
+                this.showAlert(id);
+
+                return false;
+            }
         } else {
-            fieldElement.classList.add('fieldAlert');
-            alert.style.display = 'block';
-            console.log(fieldElement);
-            console.log('empty');
+            return false
         }
     }
+
+    showAlert(id: string) {
+        console.log('field Alert')
+        if (id == 'name') {
+            console.log(id, this.showNameAlert)
+            this.showNameAlert = true;
+            console.log(id, this.showNameAlert)
+        }
+        if (id == 'email') {
+            this.showEmailAlert = true;
+        }
+        if (id == 'message') {
+            this.showMessageAlert = true;
+        }
+    }
+
+    HideAlert(id: string) {
+        if (id == 'name') {
+            this.showNameAlert = false;
+        }
+        if (id == 'email') {
+            this.showEmailAlert = false;
+        }
+        if (id == 'message') {
+            this.showMessageAlert = false;
+        }
+    }
+
+    checkInputFields(event: Event) {
+        const target = event.target as HTMLInputElement;
+        if (target.name === 'email') {
+            this.checkEmail();
+        } else {
+            target.classList.add('filled');
+        }
+    }
+
+    addFilledClass(event: Event, alertElement: HTMLElement) {
+        const target = event.target as HTMLInputElement;
+        if (target.name === 'email') {
+            this.checkEmail();
+        } else {
+            target.classList.add('filled');
+            this.hideAlert(alertElement);
+        }
+    }
+
+
+    checkEmail() {
+        const emailField = this.emailField.nativeElement;
+        this.showEmailAlert = !emailField.value.includes('@');
+    }
+
+    hideAlert(alertElement: HTMLElement) {
+        alertElement.style.display = 'none';
+    }
+
+
 }
