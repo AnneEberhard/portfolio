@@ -118,3 +118,13 @@
   font-size: 46px;
   text-align-last: justify;
 }
+
+
+.blackCurve {
+  position: absolute;
+  right:0;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -9;
+  top: 350px;
+}
