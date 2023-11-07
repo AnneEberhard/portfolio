@@ -11,7 +11,7 @@ export class PortfolioComponent {
     image:'assets/img/join.png',
     header: 'Join',
     subheader: 'Javascript | HTML | CSS',
-    text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas',
+    text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.',
     linkLive:'http://anne-eberhard.developerakademie.net/Join-Mono/index.html',
     linkGit:'https://github.com/AnneEberhard/Join-Mono'
   },

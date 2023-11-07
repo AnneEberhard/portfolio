@@ -21,8 +21,8 @@
     <div class="portfolioRight" [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
       <h3>{{ item.header }}</h3>
       <span translate>{{ item.subheader }}</span>
-      <p>
-        {{ item.text }}
+      <p [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
+        {{ item.text | translate}}
       </p>
       <div class="portfolioButtons" [ngClass]="{ justifyFlexEnd: i % 2 !== 0 }">
         <a target="_blank" href="{{ item.linkLive }}" class="buttonLive"
