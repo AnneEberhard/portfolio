@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PageService } from '../page.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { PageService } from '../page.service';
 })
 export class HeaderComponent {
 
-  constructor(private pageService: PageService) {}
+  constructor(private pageService: PageService, public translate: TranslateService) {  }
 
   scrollToSection(sectionId: string) {
     this.pageService.scrollToSection(sectionId);
