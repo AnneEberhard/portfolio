@@ -1,13 +1,17 @@
 <header>
-<div>
-    <img src="assets/img/AnnesLogo/logo_transparent.png" alt="Anne Eberhard logo">
-</div>
-<div class="headerLinkContainer">
-    <a (click)="scrollToSection('aboutMe')"translate>About me</a>
+  <div>
+    <img
+      src="assets/img/AnnesLogo/logo_transparent.png"
+      alt="Anne Eberhard logo"
+    />
+  </div>
+  <div class="headerLinkContainer">
+    <a (click)="scrollToSection('aboutMe')" translate>About me</a>
     <a (click)="scrollToSection('mySkills')">Skills</a>
     <a (click)="scrollToSection('portfolio')">Portfolio</a>
-    <a (click)=" this.translate.use('en')">EN</a> |
-    <a (click)=" this.translate.use('de');">DE</a>
-</div>
-
+    <div class="translationButtons">
+        <a (click)="this.translate.use('de')">DE</a> |
+    <a (click)="this.translate.use('en')">EN</a> 
+    </div>
+  </div>
 </header>

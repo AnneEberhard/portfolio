@@ -17,13 +17,13 @@
   <div class="contactRight paddingStandardRight">
 
     <form #contactForm (submit)="sendMail($event)" ngNativeValidate>
-      <input translate placeholder="Your name" class="alignCenter" type="text" name="name" #nameField (input)="checkInputFields($event)" />
+      <input translate placeholder="Name" class="alignCenter" type="text" name="name" #nameField (input)="checkInputFields($event)" />
       <div *ngIf='showNameAlert' class="alert" translate>Your name is required</div>
     
-      <input translate placeholder="Your email" class="alignCenter" type="email" name="email" #emailField (input)="checkInputFields($event)" />
+      <input translate placeholder="Email" class="alignCenter" type="email" name="email" #emailField (input)="checkInputFields($event)" />
       <div *ngIf="showEmailAlert" class="alert" translate>A valid email address is required</div>
     
-      <textarea translate placeholder="Your message" name="message" #messageField (input)="checkInputFields($event)"></textarea>
+      <textarea translate placeholder="Message" name="message" #messageField (input)="checkInputFields($event)"></textarea>
       <div *ngIf="showMessageAlert" class="alert" translate>Your message is empty</div>
     
       <div id="privacyContainer">

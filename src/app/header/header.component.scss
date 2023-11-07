@@ -27,5 +27,16 @@ header {
 .headerLinkContainer {
     display:flex;
     gap:29px;
+    align-items: center;
+}
+
+.translationButtons {
+    display:flex;
+    gap:8px;
+    align-items: center;
+    
+    a {
+        color: rgba(240, 240, 240, 0.8);
+    }
 }
 
