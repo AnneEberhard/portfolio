@@ -5,7 +5,7 @@
       <h2>Portfolio</h2>
       <div class="lineWide"></div>
     </div>
-    <p>
+    <p translate>
       Please find below a sample of my work. Links lead either to the code on
       github or a live test.
     </p>
@@ -20,7 +20,7 @@
     </div>
     <div class="portfolioRight" [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
       <h3>{{ item.header }}</h3>
-      <span>{{ item.subheader }}</span>
+      <span translate>{{ item.subheader }}</span>
       <p>
         {{ item.text }}
       </p>

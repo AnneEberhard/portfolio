@@ -1,13 +1,13 @@
 <section id="contact">
   <div class="contactLeftHeader">
     <div class="line"></div>
-    <h2>Contact</h2>
+    <h2 translate>Contact</h2>
   </div>
   <div class="contactContent">
   <div class="contactLeft">
 
-      <h3>Interested to learn more?</h3>
-      <p>
+      <h3 translate>Interested to learn more?</h3>
+      <p translate>
         Contact me through this form if you like to hear more, have a problem to
         solve or an idea to pursue. I am interested to learn about your projects
         and how I could contribute to them.
@@ -17,21 +17,21 @@
   <div class="contactRight paddingStandardRight">
 
     <form #contactForm (submit)="sendMail($event)" ngNativeValidate>
-      <input placeholder="Your name" class="alignCenter" type="text" name="name" #nameField (input)="checkInputFields($event)" />
-      <div *ngIf='showNameAlert' class="alert">Your name is required</div>
+      <input translate placeholder="Your name" class="alignCenter" type="text" name="name" #nameField (input)="checkInputFields($event)" />
+      <div *ngIf='showNameAlert' class="alert" translate>Your name is required</div>
     
-      <input placeholder="Your email" class="alignCenter" type="email" name="email" #emailField (input)="checkInputFields($event)" />
-      <div *ngIf="showEmailAlert" class="alert">A valid email address is required</div>
+      <input translate placeholder="Your email" class="alignCenter" type="email" name="email" #emailField (input)="checkInputFields($event)" />
+      <div *ngIf="showEmailAlert" class="alert" translate>A valid email address is required</div>
     
-      <textarea placeholder="Your message" name="message" #messageField (input)="checkInputFields($event)"></textarea>
-      <div *ngIf="showMessageAlert" class="alert">Your message is empty</div>
+      <textarea translate placeholder="Your message" name="message" #messageField (input)="checkInputFields($event)"></textarea>
+      <div *ngIf="showMessageAlert" class="alert" translate>Your message is empty</div>
     
       <div id="privacyContainer">
         <div #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()"></div>
-        <p>I've read the <a routerLink="privacy-police">privacy police</a> and agree to the progressing of my data as outlined.</p>
+        <p translate>I've read the <a routerLink="privacy-police" translate>privacy police</a> and agree to the progressing of my data as outlined.</p>
       </div>
       
-      <div #privacyAlert class="alert" *ngIf="showPrivacyAlert">Please accept the privacy police</div>
+      <div #privacyAlert class="alert" *ngIf="showPrivacyAlert" translate>Please accept the privacy police</div>
     
       <button type="submit" #sendButton [disabled]="!privacyChecked">{{sendMessage}}</button>
     </form>
