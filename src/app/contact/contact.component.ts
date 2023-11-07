@@ -1,4 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { PageService } from '../page.service';
 
 @Component({
     selector: 'app-contact',
@@ -17,7 +19,6 @@ export class ContactComponent implements  AfterViewInit {
     @ViewChild('emailAlert') emailAlertElement!: ElementRef;
     @ViewChild('messageAlert') messageAlertElement!: ElementRef;
 
-
     nameField: any;
     emailField: any;
     messageField: any;
@@ -35,6 +36,8 @@ export class ContactComponent implements  AfterViewInit {
     showNameAlert: boolean = false;
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
+
+    constructor(private pageService: PageService) {  }
 
     ngAfterViewInit() {
           this.assignFields();
@@ -222,24 +225,10 @@ export class ContactComponent implements  AfterViewInit {
             return false; 
         }
     }
-    
-    
 
-
-    addFilledClass(event: Event, alertElement: HTMLElement) {
-        const target = event.target as HTMLInputElement;
-        if (target.name === 'email') {
-            this.checkEmail();
-        } else {
-            target.classList.add('filled');
-            this.hideAlert2(alertElement);
-        }
-    }
-
-
-    hideAlert2(alertElement: HTMLElement) {
-        alertElement.style.display = 'none';
-    }
-
+    scrollToSection(sectionId: string) {
+        console.log(sectionId);
+        this.pageService.scrollToSection(sectionId);
+      }
 
 }

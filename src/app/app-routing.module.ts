@@ -7,9 +7,13 @@ import { ContactComponent } from './contact/contact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PrivacyPoliceComponent } from './privacy-police/privacy-police.component';
+import { HeaderComponent } from './header/header.component';
+import { TopComponent } from './top/top.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'top', component: TopComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'my-skills', component: MySkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
