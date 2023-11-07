@@ -25,6 +25,14 @@ footer {
     }
 }
 
+.separator {
+    margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 4px;
+    background-color: #00BEE8;
+}
+
 .footerLeft {
     display: flex;
     flex-direction: column;

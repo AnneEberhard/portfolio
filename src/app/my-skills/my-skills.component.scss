@@ -6,7 +6,7 @@
 
 .mySkillsLeft {
   display: flex;
-  width: 60vw;
+  width: 100%;
   gap: 54px;
   flex-wrap: wrap;
   z-index: 99;
@@ -36,6 +36,9 @@
   align-items: center;
   justify-content: center;
   gap: 54px;
+  z-index:9;
+  background-color: #141d2f;
+  padding-right: 20px;
 
   button {
     border-radius: 10px;
@@ -57,9 +60,10 @@
 
 .line {
   height: 4px;
-  width: 80px;
-  margin-left: 20px;
+  width: 200px;
   background-color: #4b47ff;
+  position: absolute;
+  right: 0;
 }
 
 .mySkillsShadow {
