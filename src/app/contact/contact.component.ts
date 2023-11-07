@@ -37,7 +37,7 @@ export class ContactComponent implements  AfterViewInit {
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
 
-    constructor(private pageService: PageService) {  }
+    constructor(private pageService: PageService, private translate: TranslateService) {  }
 
     ngAfterViewInit() {
           this.assignFields();
@@ -115,17 +115,15 @@ export class ContactComponent implements  AfterViewInit {
     }
 
     sendAnimation() {
-        console.log('animation')
-        this.sendMessage = 'Sending...';
-    }
-
-    messageSend() {
-        console.log('message send');
-        this.sendMessage = 'Message sent';
+        this.sendMessage = this.translate.instant('sending'); // Übersetze die Nachricht während des Sendevorgangs
+      }
+    
+      messageSend() {
+        this.sendMessage = this.translate.instant('messageSent'); // Übersetze die Nachricht nachdem die Nachricht gesendet wurde
         setTimeout(() => {
-            this.sendMessage = 'Send message';
+          this.sendMessage = this.translate.instant('sendMessage'); // Setze die Nachricht zurück
         }, 2000);
-    }
+      }
 
     checkPrivacy() {
         if (!this.privacyChecked) {
@@ -219,7 +217,6 @@ export class ContactComponent implements  AfterViewInit {
         const afterAt = emailValue.substring(atIndex + 1);
         const regex = /^[a-zA-Z]{2,}$/;   
         if (regex.test(beforeAt) && regex.test(afterAt)) {
-            console.log('true');
             return true; 
         } else {
             return false; 
@@ -227,7 +224,6 @@ export class ContactComponent implements  AfterViewInit {
     }
 
     scrollToSection(sectionId: string) {
-        console.log(sectionId);
         this.pageService.scrollToSection(sectionId);
       }
 

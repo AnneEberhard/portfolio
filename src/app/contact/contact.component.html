@@ -33,7 +33,7 @@
       
       <div #privacyAlert class="alert" *ngIf="showPrivacyAlert" translate>Please accept the privacy police</div>
     
-      <button type="submit" #sendButton [disabled]="!privacyChecked">{{sendMessage}}</button>
+      <button type="submit" #sendButton [disabled]="!privacyChecked">{{sendMessage | translate}}</button>
     </form>
   </div>
  </div>

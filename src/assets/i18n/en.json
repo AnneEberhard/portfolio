@@ -104,5 +104,8 @@
 	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.",
 	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.",
 	"tbd": "tdb",
-	"A bookstagram page based on Instagram.": "A bookstagram page based on Instagram."
+	"A bookstagram page based on Instagram.": "A bookstagram page based on Instagram.",
+	"Send message": "Send message",
+	"Sending...": "Sending...",
+	"Message sent": "Message sent"
 }
