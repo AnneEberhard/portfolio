@@ -217,10 +217,14 @@ h3 {
 
 p {
   padding-left: 20px!important;
+  padding-right: 20px;
 }
-.contactContent { flex-direction: column;}
+.contactContent { 
+  flex-direction: column;}
 
 .contactRight {
   padding-left: 20px;
+  padding-right: 20px;
 }
+
   }
