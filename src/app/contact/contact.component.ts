@@ -1,6 +1,7 @@
-import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, AfterViewInit, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PageService } from '../page.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
     selector: 'app-contact',
@@ -8,6 +9,8 @@ import { PageService } from '../page.service';
     styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements  AfterViewInit {
+    private readonly viewport = inject(ViewportScroller)
+
     @ViewChild('contactForm') contactFormElement!: ElementRef;
     @ViewChild('nameField') nameFieldElement!: ElementRef;
     @ViewChild('emailField') emailFieldElement!: ElementRef;
@@ -227,4 +230,8 @@ export class ContactComponent implements  AfterViewInit {
         this.pageService.scrollToSection(sectionId);
       }
 
+
+      scrollToTop(): void {
+        this.viewport.scrollToPosition([0,0])
+      }
 }

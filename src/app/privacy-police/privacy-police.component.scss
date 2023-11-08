@@ -27,3 +27,25 @@
         transform: scale(1.1);
       }
     }}
+
+    .arrowUp {
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        right: 100px;
+        cursor: pointer;
+        
+        &:hover {
+          path {
+            fill: #00bee8;
+          }
+      
+          rect {
+            stroke: #00bee8;
+          }
+        }
+      
+        path, rect {
+          transition: fill 0.3s, stroke 0.3s;
+        }
+      }
