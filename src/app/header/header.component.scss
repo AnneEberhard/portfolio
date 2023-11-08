@@ -40,3 +40,27 @@ header {
     }
 }
 
+
+@media (max-width: 800px) {
+        
+    header {
+        max-width:100%;
+        padding: 37px 25px 25px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #141D2F;
+    
+        img {
+            height:80px;
+        }
+    
+        a {
+            font-size: 16px;
+            gap:8px;
+       
+            
+        }
+    }
+    
+}

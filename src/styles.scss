@@ -46,6 +46,54 @@ h4 {
   flex-direction: column;
 }
 
+@media (max-width: 1400px) {
+  h2 {
+    font-size: 54px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .paddingStandardRight {
+    padding-right: 60px;
+  }
+  
+  .paddingStandardLeft {
+    padding-left: 60px;
+  }
+  section {
+    gap: 40px;
+  }
+
+  .dNone1200 {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 40px !important;
+  }
+
+  .dNone1000 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .paddingStandardRight {
+    padding-right: 20px;
+  }
+  
+  .paddingStandardLeft {
+    padding-left: 20px;
+  }
+
+  .dNone800 {
+    display: none !important;
+  }
+}
+
 /*Fonts*/
 /* poppins-100 - latin */
 @font-face {

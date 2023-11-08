@@ -1,4 +1,4 @@
-<section id="top">
+<section id="top" class="paddingStandardRight">
   <div class="topLeft">
     <div class="shadowBox topShadow">
       <img class="portfolioImage" src="assets/img/portfolio ohne background.png"/>
@@ -12,12 +12,12 @@
         <img src="assets/img/icons/linkedIn_big.png" alt="LinkedIn Logo" /></a>
       <a (click)="scrollToSection('contact')">
         <img src="assets/img/icons/email_big.png" alt="email logo" /></a>
-      <a (click)="scrollToSection('contact')">anne.eberhard@gmx.net</a>
+      <a class="dNone1200" (click)="scrollToSection('contact')">anne.eberhard(at)gmx.net</a>
     </div>
   </div>
   </div>
 
-  <div class="topRight paddingStandardRight">
+  <div class="topRight ">
     <div class="topRightTop">
       <div class="vertical" translate>I am</div>
       <div>
@@ -27,9 +27,10 @@
     </div>
     <button (click)="scrollToSection('contact')"translate>Let's chat</button>
   </div>
-  <div class="ScrollDown ">
-    <div class="verticalSmall" translate>Scroll down</div>
-    <img src="assets/img/icons/arrow-down.png">
-  </div>
+
 </section>
+<div class="ScrollDown dNone1000">
+  <span translate>Scroll down</span>
+  <img src="assets/img/icons/arrow-down.png">
+</div>
 <img class="blackCurve" src="assets/img/shadows/black-curve.png" alt="" />

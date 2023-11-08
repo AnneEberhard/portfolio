@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.aboutMeLeft {
+  z-index: 99;
+}
+
 .aboutMeInfo {
   display: flex;
   justify-content: center;

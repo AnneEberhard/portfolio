@@ -6,7 +6,6 @@
 
 .mySkillsLeft {
   display: flex;
-  width: 100%;
   gap: 54px;
   flex-wrap: wrap;
   z-index: 99;
@@ -73,4 +72,37 @@
   top: 1282.96px;
   left: -121.49px;
   rotate: 151.74 deg;
+}
+
+
+@media (max-width: 800px) { 
+  section {
+    flex-direction: column-reverse;
+  }
+
+.mySkillsRight {
+  padding: 0 20px 0 20px;
+}
+
+  .mySkillsRightTop {
+    text-align: center !important;
+    background-color: transparent;
+   }
+    
+
+  .mySkillsRightTopText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mySkillsShadow {
+    position: absolute;
+    width: 250px;
+    height: 550px;
+    top: 1282.96px;
+    left: -121.49px;
+    rotate: 151.74 deg;
+  }
 }

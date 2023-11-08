@@ -20,7 +20,7 @@
 .contactLeft {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 100%;
 
   h3 {
     color: white !important;
@@ -205,3 +205,22 @@
 }
 
 
+@media (max-width: 800px) { 
+.line {
+  width: 20px;
+  margin-right: 10px;;
+}
+
+h3 {
+  padding-left: 20px !important;
+}
+
+p {
+  padding-left: 20px!important;
+}
+.contactContent { flex-direction: column;}
+
+.contactRight {
+  padding-left: 20px;
+}
+  }
