@@ -5,11 +5,32 @@
       alt="Anne Eberhard logo"
     />
   </div>
-  <div class="headerLinkContainer">
+  <div class="headerLinkContainer dNone500">
     <a (click)="scrollToSection('aboutMe')" translate>About me</a>
     <a (click)="scrollToSection('mySkills')">Skills</a>
     <a (click)="scrollToSection('portfolio')">Portfolio</a>
     <div class="translationButtons">
+      <a (click)="this.translate.use('de')">DE</a> |
+      <a (click)="this.translate.use('en')">EN</a>
+    </div>
+  </div>
+  <div (click)="openMobileMenu()" id="burgerMenu">
+    <img src="assets/img/icons/burger-menu.png" alt="burger menuo icon">
+  </div>
+  <div id="headerLinkContainerMobile" class="dNone">
+    <div class="mobileNav">
+      <div class="translationButtons">
+        <a (click)="this.translate.use('de')">DE</a> |
+        <a (click)="this.translate.use('en')">EN</a>
+      </div>
+      <img (click)="closeMobileMenu()" src="assets/img/icons/close.png" alt="close">
+    </div>
+    <div class="mobileLinks">
+      <a (click)="scrollToSection('aboutMe')" translate>About me</a>
+      <a (click)="scrollToSection('mySkills')">Skills</a>
+      <a (click)="scrollToSection('portfolio')">Portfolio</a>
+  </div>
+    <div class="translationButtons dNone500">
       <a (click)="this.translate.use('de')">DE</a> |
       <a (click)="this.translate.use('en')">EN</a>
     </div>

@@ -232,6 +232,12 @@
 }
 
 @media (max-width: 400px) {
+
+  .portfolioImage {
+    height: 200px;
+    width: 250px !important;
+    margin-left: 20px;
+  }
   h2 {
     font-size: 33px !important;
   }
@@ -242,5 +248,14 @@
 
   #top {
     flex-direction: column;
+  }
+
+  .topShadow {
+    height: 300px;
+    width: 300px;
+  }
+
+  .line {
+    width: 70px;
   }
 }

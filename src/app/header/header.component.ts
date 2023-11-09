@@ -14,4 +14,16 @@ export class HeaderComponent {
   scrollToSection(sectionId: string) {
     this.pageService.scrollToSection(sectionId);
   }
+
+  openMobileMenu() {
+ document.getElementById('headerLinkContainerMobile')?.classList.remove('dNone')
+ document.getElementById('burgerMenu')?.classList.add('dNone')
+  }
+
+  closeMobileMenu() {
+    document.getElementById('headerLinkContainerMobile')?.classList.add('dNone')
+    document.getElementById('burgerMenu')?.classList.remove('dNone')
+  }
+
+
 }

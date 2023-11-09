@@ -1,66 +1,120 @@
 header {
-    max-width:100%;
-    padding: 37px 100px 37px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #141D2F;
+  max-width: 100%;
+  padding: 37px 100px 37px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141d2f;
 
-    img {
-        height:80px;
+  img {
+    height: 80px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    gap: 29px;
+    cursor: pointer;
+
+    &:hover {
+      color: #00bee8;
     }
-
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 24px;
-        gap:29px;
-        cursor: pointer;
-
-        &:hover {
-            color: #00BEE8;
-            ;
-        }
-    }
+  }
 }
 
 .headerLinkContainer {
-    display:flex;
-    gap:29px;
-    align-items: center;
+  display: flex;
+  gap: 29px;
+  align-items: center;
 }
 
 .translationButtons {
-    display:flex;
-    gap:8px;
-    align-items: center;
-    
-    a {
-        color: rgba(240, 240, 240, 0.8);
-    }
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  a {
+    color: rgba(240, 240, 240, 0.8);
+  }
 }
 
+#headerLinkContainerMobile {
+  display: none;
+}
+
+#burgerMenu {
+  display: none;
+}
 
 @media (max-width: 800px) {
-        
-    header {
-        max-width:100%;
-        padding: 37px 25px 25px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #141D2F;
-    
-        img {
-            height:80px;
-        }
-    
-        a {
-            font-size: 16px;
-            gap:8px;
-       
-            
-        }
+  header {
+    max-width: 100%;
+    padding: 37px 25px 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141d2f;
+
+    img {
+      height: 80px;
     }
-    
+
+    a {
+      font-size: 16px;
+      gap: 8px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  #burgerMenu {
+    display: flex;
+    img {
+        width: 30px; 
+        height: 30px;
+        cursor: pointer;
+    }
+  }
+
+  #headerLinkContainerMobile {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top:0px;
+    left:0;
+    right:0;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .mobileNav {
+
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 37px 25px 25px 10px;
+    gap: 16px;
+    box-sizing: border-box;
+     img {
+        width: 30px; 
+        height: 30px;
+        cursor: pointer;
+     }
+  }
+
+  .mobileLinks {
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+    margin-top: 20px;
+
+    a {
+        font-size: 28px;
+    }
+  }
+
 }

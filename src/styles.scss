@@ -38,12 +38,16 @@ h4 {
 }
 
 .shadowBox {
-  overflow:hidden;
+  overflow:hidden !important;
 }
 
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.dNone {
+ display: none !important;
 }
 
 @media (max-width: 1400px) {
@@ -93,6 +97,14 @@ h4 {
     display: none !important;
   }
 }
+
+@media (max-width: 500px) {
+
+  .dNone500 {
+    display: none !important;
+  }
+}
+
 
 /*Fonts*/
 /* poppins-100 - latin */
