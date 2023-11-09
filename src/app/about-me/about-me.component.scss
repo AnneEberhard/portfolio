@@ -57,3 +57,15 @@
   right:0;
   transform: rotate(180deg);
  }
+
+ @media (max-width:320px) {
+.aboutMeLeft {
+p {
+  font-size: 14px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
+}
+}
+ }

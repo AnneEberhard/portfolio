@@ -207,3 +207,27 @@
     height: 274px;
   }
 }
+
+@media (max-width:320px) {
+  .portfolioHeaderTop {
+    display: flex;
+    justify-content: flex-end;
+  
+    h2 {
+      background-color: transparent;
+    }
+  }
+  
+  .line {
+
+    width: 20px;
+  
+  }
+  
+  .lineWide {
+    z-index: 99;
+    width: 40px;
+  }
+  
+ 
+}

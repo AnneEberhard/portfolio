@@ -259,3 +259,21 @@
     width: 70px;
   }
 }
+
+@media (max-width:320px) {
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .job {
+    font-size: 18px;
+  }
+
+  .vertical {
+    font-size: 16px;
+  }
+
+  .line {
+    width: 60px;
+  }
+}

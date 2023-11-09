@@ -105,6 +105,22 @@ h4 {
   }
 }
 
+@media (max-width:320px) {
+  .paddingStandardRight {
+    padding-right: 8px;
+  }
+  
+  .paddingStandardLeft {
+    padding-left: 8px;
+  }
+  section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 
 /*Fonts*/
 /* poppins-100 - latin */
