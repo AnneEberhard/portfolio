@@ -81,12 +81,15 @@ header {
   #headerLinkContainerMobile {
     display: flex;
     background-color: rgba(65,72,86, 0.8);
-    position: absolute;
+    position: fixed;
     top:0px;
-    left:0;
-    right:0;
-    height: 100vh;
+    bottom:0px;
+    left: 0;
+    right: 0;
     flex-direction: column;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 999;
   }
 
   .mobileNav {

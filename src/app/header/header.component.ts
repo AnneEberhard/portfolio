@@ -9,21 +9,22 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 
-  constructor(private pageService: PageService, public translate: TranslateService) {  }
+  constructor(private pageService: PageService, public translate: TranslateService) { }
 
   scrollToSection(sectionId: string) {
     this.pageService.scrollToSection(sectionId);
   }
 
+
   openMobileMenu() {
- document.getElementById('headerLinkContainerMobile')?.classList.remove('dNone')
- document.getElementById('burgerMenu')?.classList.add('dNone')
+    document.getElementById('headerLinkContainerMobile')?.classList.remove('dNone')
+    document.getElementById('burgerMenu')?.classList.add('dNone')
   }
+
 
   closeMobileMenu() {
     document.getElementById('headerLinkContainerMobile')?.classList.add('dNone')
     document.getElementById('burgerMenu')?.classList.remove('dNone')
   }
-
 
 }

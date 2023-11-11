@@ -8,7 +8,7 @@ import { PageService } from '../page.service';
 })
 export class TopComponent {
 
-  constructor(private pageService: PageService) {}
+  constructor(private pageService: PageService) { }
 
   scrollToSection(sectionId: string) {
     this.pageService.scrollToSection(sectionId);

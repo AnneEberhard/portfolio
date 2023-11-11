@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   gap: 54px;
-  z-index:9;
+  z-index: 9;
   background-color: #141d2f;
   padding-right: 20px;
 
@@ -74,27 +74,24 @@
   rotate: 151.74 deg;
 }
 
-
-@media (max-width: 800px) { 
+@media (max-width: 800px) {
   section {
     flex-direction: column-reverse;
   }
 
-.mySkillsRight {
-  padding: 0 20px 0 20px;
-}
+  .mySkillsRight {
+    padding: 0 20px 0 20px;
+  }
 
   .mySkillsRightTop {
-    text-align: center !important;
     background-color: transparent;
-   }
-    
+  }
 
   .mySkillsRightTopText {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .mySkillsShadow {
@@ -107,8 +104,8 @@
   }
 }
 
-@media (max-width:320px) { 
-.mySkillsLeft {
-  justify-content: center;
-}
+@media (max-width: 320px) {
+  .mySkillsLeft {
+    justify-content: center;
+  }
 }

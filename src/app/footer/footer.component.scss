@@ -71,6 +71,18 @@ footer {
         flex-direction: column;
         gap: 8px;
     }
-
 }
 
+@media (max-width: 350px) { 
+
+    footer {
+        span {
+            font-size: 16px; 
+        }
+
+        img {
+            height:12px;
+        }
+    }
+
+}

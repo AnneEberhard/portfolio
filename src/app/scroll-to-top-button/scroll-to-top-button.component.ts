@@ -6,14 +6,17 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './scroll-to-top-button.component.html',
   styleUrls: ['./scroll-to-top-button.component.scss']
 })
+
 export class ScrollToTopButtonComponent {
   showScrollTopButton: boolean = false;
   windowHeight = window.innerHeight;
   scrollThreshold = this.windowHeight * 0.2;
 
+  
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
 
   @HostListener('window:scroll', [])
   onScroll(): void {

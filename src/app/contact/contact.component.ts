@@ -18,9 +18,7 @@ export class ContactComponent implements  AfterViewInit {
     @ViewChild('sendButton') sendButtonElement!: ElementRef;
     @ViewChild('privacyContainerBox') privacyContainerBoxElement!: ElementRef;
     @ViewChild('privacyAlert') privacyAlertElement!: ElementRef;
-    @ViewChild('nameAlert') nameAlertElement!: ElementRef;
-    @ViewChild('emailAlert') emailAlertElement!: ElementRef;
-    @ViewChild('messageAlert') messageAlertElement!: ElementRef;
+
 
     nameField: any;
     emailField: any;
@@ -28,9 +26,6 @@ export class ContactComponent implements  AfterViewInit {
     sendButton: any;
     privacyContainerBox: any;
     privacyAlert: any;
-    nameAlert: any;
-    emailAlert: any;
-    messageAlert: any;
 
     sendMessage = 'Send message'
 
@@ -46,6 +41,7 @@ export class ContactComponent implements  AfterViewInit {
           this.assignFields();
       }
 
+
     assignFields() {
         this.nameField = this.nameFieldElement?.nativeElement;
         this.emailField = this.emailFieldElement?.nativeElement;
@@ -53,10 +49,8 @@ export class ContactComponent implements  AfterViewInit {
         this.sendButton = this.sendButtonElement?.nativeElement;
         this.privacyContainerBox = this.privacyContainerBoxElement?.nativeElement;
         this.privacyAlert = this.privacyAlertElement?.nativeElement;
-        this.nameAlert = this.nameAlertElement?.nativeElement;
-        this.emailAlert = this.emailAlertElement?.nativeElement;
-        this.messageAlert = this.messageAlertElement?.nativeElement;
     }
+
 
     async sendMail(event: Event) {
         event.preventDefault();
@@ -94,12 +88,14 @@ export class ContactComponent implements  AfterViewInit {
         return data;
     }
 
+
     disableFields() {
         this.nameField.disabled = true;
         this.emailField.disabled = true;
         this.messageField.disabled = true;
         this.sendButton.disabled = true;
     }
+
 
     enableFields() {
         this.nameField.disabled = false;
@@ -117,6 +113,7 @@ export class ContactComponent implements  AfterViewInit {
         this.messageField.classList.remove('filled');
     }
 
+
     sendAnimation() {
         this.sendMessage = this.translate.instant('sending'); // Übersetze die Nachricht während des Sendevorgangs
       }
@@ -127,6 +124,7 @@ export class ContactComponent implements  AfterViewInit {
           this.sendMessage = this.translate.instant('sendMessage'); // Setze die Nachricht zurück
         }, 2000);
       }
+
 
     checkPrivacy() {
         if (!this.privacyChecked) {
@@ -155,6 +153,7 @@ export class ContactComponent implements  AfterViewInit {
         }
     }
 
+
     checkFieldsFilled(field: any, id: string) {
         if (field) {
             if (field.value.trim() !== '') {
@@ -164,13 +163,13 @@ export class ContactComponent implements  AfterViewInit {
             } else {
                 field.classList.add('fieldAlert');
                 this.showAlert(id);
-
                 return false;
             }
         } else {
             return false
         }
     }
+
 
     showAlert(id: string) {
         if (id == 'name') {
@@ -184,6 +183,7 @@ export class ContactComponent implements  AfterViewInit {
         }
     }
 
+
     hideAlert(id: string) {
         if (id == 'name') {
             this.showNameAlert = false;
@@ -195,6 +195,7 @@ export class ContactComponent implements  AfterViewInit {
             this.showMessageAlert = false;
         }
     }
+
 
     checkInputFields(event: Event) {
         const target = event.target as HTMLInputElement;
@@ -209,6 +210,7 @@ export class ContactComponent implements  AfterViewInit {
             this.hideAlert(id);
         }
     }
+
 
     checkEmail() {
         const emailValue = this.emailField.value;
@@ -226,6 +228,7 @@ export class ContactComponent implements  AfterViewInit {
         }
     }
 
+    
     scrollToSection(sectionId: string) {
         this.pageService.scrollToSection(sectionId);
       }
