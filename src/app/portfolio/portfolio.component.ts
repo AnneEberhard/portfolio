@@ -24,20 +24,12 @@ export class PortfolioComponent {
     linkGit:'https://github.com/AnneEberhard/ElPolloLoco'
   }
 ,{
-  image:'assets/img/portfolio.png',
-  header: 'Simple CRM',
+  image:'assets/img/ringoffire.png',
+  header: 'Ring of Fire',
   subheader: 'Angular | Firebase | Javascript | HTML | CSS',
-  text:'tbd.',
-  linkLive:'',
-  linkGit:''
-},
-{
-  image:'assets/img/booksta.png',
-  header: 'Bookstagram',
-  subheader: 'Javascript | HTML | CSS',
-  text:'A bookstagram page based on Instagram.',
-  linkLive:'http://anne-eberhard.developerakademie.net/instagram/index.html',
-  linkGit:'https://github.com/AnneEberhard/myInstagram'
+  text:'A simple card game employing Firebase as server and backend.',
+  linkLive:'https://ring-of-fire-ed7a0.web.app/',
+  linkGit:'https://github.com/AnneEberhard/ringoffire'
 }]
 
 }

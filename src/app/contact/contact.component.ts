@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit, AfterViewInit, inject } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PageService } from '../page.service';
 import { ViewportScroller } from '@angular/common';
@@ -230,8 +230,4 @@ export class ContactComponent implements  AfterViewInit {
         this.pageService.scrollToSection(sectionId);
       }
 
-
-      scrollToTop(): void {
-        this.viewport.scrollToPosition([0,0])
-      }
 }

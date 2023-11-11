@@ -16,6 +16,7 @@ import { PrivacyPoliceComponent } from './privacy-police/privacy-police.componen
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ScrollToTopButtonComponent } from './scroll-to-top-button/scroll-to-top-button.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -34,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     MainPageComponent,
     PrivacyPoliceComponent,
+    ScrollToTopButtonComponent,
   ],
   imports: [
     BrowserModule,
