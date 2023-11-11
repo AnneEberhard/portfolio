@@ -208,7 +208,7 @@
   }
 }
 
-@media (max-width:320px) {
+@media (max-width:350px) {
   .portfolioHeaderTop {
     display: flex;
     justify-content: flex-end;
@@ -229,5 +229,7 @@
     width: 40px;
   }
   
- 
+  .portfolioShadow2{
+    top: 3400px;
+  }
 }

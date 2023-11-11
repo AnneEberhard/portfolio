@@ -227,7 +227,16 @@
   }
 
   #top {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .topLeftBottomContainer {
+    width: 60vw;
+    justify-content: flex-start;
+  }
+
+  .line {
+    width: 70px;
   }
 }
 
@@ -256,11 +265,11 @@
   }
 
   .line {
-    width: 70px;
+    width: 60px;
   }
 }
 
-@media (max-width:320px) {
+@media (max-width:350px) {
   h2 {
     font-size: 24px !important;
   }
