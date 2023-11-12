@@ -15,14 +15,19 @@
     *ngFor="let item of portfolio; let i = index"
     [ngClass]="{ swapOrder: i % 2 !== 0 }"
   >
-    <div class="portfolioLeft">
+    <div class="portfolioLeft" *ngIf="animateArray[i]" [@slide] id="{{ item.id }}">
       <img src="{{ item.image }}" alt="screenshot" />
     </div>
-    <div class="portfolioRight" [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
+    <div
+      class="portfolioRight"
+      [ngClass]="{ alignFlexEnd: i % 2 !== 0 }"
+      *ngIf="animateArray[i]"
+      [@slide]
+    >
       <h3>{{ item.header }}</h3>
       <span translate>{{ item.subheader }}</span>
       <p [ngClass]="{ alignFlexEnd: i % 2 !== 0 }">
-        {{ item.text | translate}}
+        {{ item.text | translate }}
       </p>
       <div class="portfolioButtons" [ngClass]="{ justifyFlexEnd: i % 2 !== 0 }">
         <a target="_blank" href="{{ item.linkLive }}" class="buttonLive"
@@ -34,9 +39,9 @@
       </div>
     </div>
   </div>
+
   <div class="shadowBox">
     <img class="portfolioShadow1" src="assets/img/shadows/blue2.png" />
   </div>
-
 </section>
-<img class="portfolioShadow2" src="assets/img/shadows/petrol2.png">
+<img class="portfolioShadow2" src="assets/img/shadows/petrol2.png" />

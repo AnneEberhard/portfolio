@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 import { PageService } from '../page.service';
+import { fadeIn } from '../animations/fade-in.animation';
+import { slideAndWiggle } from '../animations/slide-and-wiggle.animation';
+import { wiggle } from '../animations/wiggle.animation';
+import { slide } from '../animations/slide.animations';
+
 
 @Component({
   selector: 'app-my-skills',
   templateUrl: './my-skills.component.html',
-  styleUrls: ['./my-skills.component.scss']
+  styleUrls: ['./my-skills.component.scss'],
+  animations: [fadeIn, slideAndWiggle, wiggle, slide],
 })
 export class MySkillsComponent {
   skillSet = [{
@@ -59,9 +65,29 @@ export class MySkillsComponent {
   },
   ]
 
+  animate = false;
+  private scrolling = false;
+
   constructor(private pageService: PageService) { }
 
   scrollToSection(sectionId: string) {
     this.pageService.scrollToSection(sectionId);
   }
+
+  @HostListener('window:scroll', [])
+
+  onScroll(): void {
+    if (!this.scrolling) {
+      this.scrolling = true;
+      setTimeout(() => {
+        const scrollPosition = window.scrollY;
+        const element = document.getElementById('mySkills');
+        const elementPosition = element?.offsetTop ?? 0;
+        this.animate = scrollPosition > elementPosition - 500;
+        console.log(this.animate);
+        this.scrolling = false;
+      }, 300);
+    }
+  }
+
 }

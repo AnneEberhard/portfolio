@@ -1,4 +1,4 @@
-<section id="contact">
+<section id="contact" *ngIf="animate" [@slide]>
   <div class="contactLeftHeader">
     <div class="line"></div>
     <h2 translate>Contact</h2>
@@ -28,7 +28,7 @@
     
       <div id="privacyContainer">
         <div #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()"></div>
-        <p translate>I've read the <a routerLink="privacy-police" translate>privacy police</a> and agree to the progressing of my data as outlined.</p>
+        <p translate>I've read the <a routerLink="privacy-police" translate>privacy policy</a> and agree to the progressing of my data as outlined.</p>
       </div>
       
       <div #privacyAlert class="alert" *ngIf="showPrivacyAlert" translate>Please accept the privacy police</div>

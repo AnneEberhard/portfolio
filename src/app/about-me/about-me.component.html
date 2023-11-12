@@ -1,23 +1,23 @@
 <section id="aboutMe">
-  <div class="aboutMeLeft paddingStandardLeft">
+  <div class="aboutMeLeft paddingStandardLeft" *ngIf="animate" [@slide]>
     <h2 translate>About me</h2>
-    <p translate>
+    <p translate > 
       I am Dr. med. Anne Eberhard, MPH, a frontend developer. Coding has always
       been a passion of me which I an now able to pursue. 
     </p>
     <div>
-      <div class="aboutMeInfo">
-        <img src="assets/img/icons/bulb-small.png" alt="lightbulb" />
-        <p translate>
+      <div class="aboutMeInfo" >
+        <img src="assets/img/icons/bulb-small.png" alt="lightbulb" *ngIf="animate" [@slideAndWiggle]/>
+        <p translate *ngIf="animate" [@slide]>
           My academical background is a medical doctor and master of public
           health with a specialization in gynecology/obstretrics. I have
           extensive experience in the healthcare system - from patient care to
           public health, from health insurance to the pharmaceutical industry.
         </p>
       </div >
-      <div class="aboutMeInfo">
-        <img src="assets/img/icons/puzzle-small.png" alt="puzzle piece" />
-        <p translate>
+      <div class="aboutMeInfo" >
+        <img src="assets/img/icons/puzzle-small.png"  alt="puzzle piece" *ngIf="animate" [@slideAndWiggle]/>
+        <p translate *ngIf="animate" [@slide]>
           Adding to my knowledge, I successfully completed the developer academy
           to become a frontend developer. I am enrolled for the backend as well,
           in order to to become full stack developer.
@@ -26,8 +26,8 @@
     </div>
   </div>
   <img class="aboutMeShadow" src="assets/img/shadows/blue1.png">
-  <div class="aboutMeRight ">
-    <div class="headshot ">
+  <div class="aboutMeRight " *ngIf="animate" [@fadeIn]>
+    <div class="headshot" >
       <img src="assets/img/2023-04-26-nobackground.png" />
     </div>
     <div class="line dNone800"></div>

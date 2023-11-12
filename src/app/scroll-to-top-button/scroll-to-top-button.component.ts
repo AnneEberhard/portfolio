@@ -1,4 +1,3 @@
-// scroll-to-top-button.component.ts
 import { Component, HostListener } from '@angular/core';
 
 @Component({

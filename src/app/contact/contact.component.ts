@@ -1,14 +1,19 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, inject } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, inject, HostListener } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { PageService } from '../page.service';
 import { ViewportScroller } from '@angular/common';
+import { fadeIn } from '../animations/fade-in.animation';
+import { slideAndWiggle } from '../animations/slide-and-wiggle.animation';
+import { wiggle } from '../animations/wiggle.animation';
+import { slide } from '../animations/slide.animations';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss']
+    styleUrls: ['./contact.component.scss'],
+    animations: [fadeIn, slideAndWiggle, wiggle, slide],
 })
-export class ContactComponent implements  AfterViewInit {
+export class ContactComponent implements AfterViewInit {
     private readonly viewport = inject(ViewportScroller)
 
     @ViewChild('contactForm') contactFormElement!: ElementRef;
@@ -35,11 +40,30 @@ export class ContactComponent implements  AfterViewInit {
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
 
-    constructor(private pageService: PageService, private translate: TranslateService) {  }
+    animate = false;
+    private scrolling = false;
+
+    constructor(private pageService: PageService, private translate: TranslateService) { }
+
+    @HostListener('window:scroll', [])
+
+    onScroll(): void {
+        if (!this.scrolling) {
+            this.scrolling = true;
+            setTimeout(() => {
+                const scrollPosition = window.scrollY;
+                const element = document.getElementById('contact');
+                const elementPosition = element?.offsetTop ?? 0;
+                this.animate = scrollPosition > elementPosition - 400;
+                this.scrolling = false;
+                console.log(this.animate);
+            }, 300);
+        }
+    }
 
     ngAfterViewInit() {
-          this.assignFields();
-      }
+        this.assignFields();
+    }
 
 
     assignFields() {
@@ -78,7 +102,7 @@ export class ContactComponent implements  AfterViewInit {
             }
         }
     }
-    
+
 
     collectdata() {
         const data = new FormData();
@@ -116,14 +140,14 @@ export class ContactComponent implements  AfterViewInit {
 
     sendAnimation() {
         this.sendMessage = this.translate.instant('sending'); // Übersetze die Nachricht während des Sendevorgangs
-      }
-    
-      messageSend() {
+    }
+
+    messageSend() {
         this.sendMessage = this.translate.instant('messageSent'); // Übersetze die Nachricht nachdem die Nachricht gesendet wurde
         setTimeout(() => {
-          this.sendMessage = this.translate.instant('sendMessage'); // Setze die Nachricht zurück
+            this.sendMessage = this.translate.instant('sendMessage'); // Setze die Nachricht zurück
         }, 2000);
-      }
+    }
 
 
     checkPrivacy() {
@@ -216,21 +240,21 @@ export class ContactComponent implements  AfterViewInit {
         const emailValue = this.emailField.value;
         const atIndex = emailValue.indexOf('@');
         if (atIndex === -1) {
-            return false; 
+            return false;
         }
         const beforeAt = emailValue.substring(0, atIndex);
         const afterAt = emailValue.substring(atIndex + 1);
-        const regex = /^[a-zA-Z]{2,}$/;   
+        const regex = /^[a-zA-Z]{2,}$/;
         if (regex.test(beforeAt) && regex.test(afterAt)) {
-            return true; 
+            return true;
         } else {
-            return false; 
+            return false;
         }
     }
 
-    
+
     scrollToSection(sectionId: string) {
         this.pageService.scrollToSection(sectionId);
-      }
+    }
 
 }
