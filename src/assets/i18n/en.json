@@ -1,8 +1,23 @@
 {
+	"I am": "I am",
+	"Let's chat": "Let's chat",
+
 	"About me": "About me",
 	"I am Dr. med. Anne Eberhard, MPH, a frontend developer. Coding has always been a passion of me which I an now able to pursue.": "I am Dr. med. Anne Eberhard, MPH, a frontend developer. Coding has always been a passion of me which I an now able to pursue.",
 	"My academical background is a medical doctor and master of public health with a specialization in gynecology/obstretrics. I have extensive experience in the healthcare system - from patient care to public health, from health insurance to the pharmaceutical industry.": "My academical background is a medical doctor and master of public health with a specialization in gynecology/obstretrics. I have extensive experience in the healthcare system - from patient care to public health, from health insurance to the pharmaceutical industry.",
 	"Adding to my knowledge, I successfully completed the developer academy to become a frontend developer. I am enrolled for the backend as well, in order to to become full stack developer.": "Adding to my knowledge, I successfully completed the developer academy to become a frontend developer. I am enrolled for the backend as well, in order to to become full stack developer.",
+
+	"My skills": "My skills",
+	"The frontend skills I learned during my online course I have now grown and are able to employ in real-life projects": "The frontend skills I learned during my online course I have now grown and are able to employ in real-life projects",
+	"Get in touch": "Get in touch",
+	"Please find below a sample of my work. Links lead either to the code on github or a live test.": "Please find below a sample of my work. Links lead either to the code on github or a live test.",
+
+	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.",
+	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.",
+	"The live Website for my little publishing company.": "The live Website for my little publishing company.",
+	"A bookstagram page based on Instagram.": "A bookstagram page based on Instagram.",
+	"A simple card game employing Firebase as server and backend.": "A simple card game employing Firebase as server and backend.",
+
 	"Contact": "Contact",
 	"Interested to learn more?": "Interested to learn more?",
 	"Contact me through this form if you like to hear more, have a problem to solve or an idea to pursue. I am interested to learn about your projects and how I could contribute to them.": "Contact me through this form if you like to hear more, have a problem to solve or an idea to pursue. I am interested to learn about your projects and how I could contribute to them.",
@@ -13,6 +28,10 @@
 	"and agree to the progressing of my data as outlined.": "and agree to the progressing of my data as outlined.",
 	"privacy policy": "privacy policy",
 	"Please accept the privacy policy": "Please accept the privacy policy",
+	"Send message": "Send message",
+	"Sending...": "Sending...",
+	"Message sent": "Message sent",
+
 	"Imprint": "Imprint",
 	"Website Terms and Conditions of Use": "Website Terms and Conditions of Use",
 	"1. Terms": "1. Terms",
@@ -44,10 +63,7 @@
 	"Pictures and Icons": "Pictures and Icons",
 	"home": "home",
 	"checkmark": "checkmark",
-	"My skills": "My skills",
-	"The frontend skills I learned during my online course I have now grown and are able to employ in real-life projects": "The frontend skills I learned during my online course I have now grown and are able to employ in real-life projects",
-	"Get in touch": "Get in touch",
-	"Please find below a sample of my work. Links lead either to the code on github or a live test.": "Please find below a sample of my work. Links lead either to the code on github or a live test.",
+	
 	"Privacy policy": "Privacy policy",
 	"Responsible person in terms of data protection laws, in particular the EU General Data Protection Regulation (DSGVO), is: Anne Eberhard.": "Responsible person in terms of data protection laws, in particular the EU General Data Protection Regulation (DSGVO), is: Anne Eberhard.",
 	"Your data subject rights": "Your data subject rights",
@@ -98,15 +114,5 @@
 	"Questions for the data protection officer": "Questions for the data protection officer",
 	"If you have any questions about data protection, please write us an e-mail or contact the person responsible for data protection in our organization directly:": "If you have any questions about data protection, please write us an e-mail or contact the person responsible for data protection in our organization directly:",
 	"This privacy statement was created with the help of activeMind AG, the experts for": "This privacy statement was created with the help of activeMind AG, the experts for",
-	"(Version #2020-09-30)": "(Version #2020-09-30)",
-	"I am": "I am",
-	"Let's chat": "Let's chat",
-	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.",
-	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.",
-	"tbd": "tdb",
-	"A bookstagram page based on Instagram.": "A bookstagram page based on Instagram.",
-	"A simple card game employing Firebase as server and backend.": "A simple card game employing Firebase as server and backend.",
-	"Send message": "Send message",
-	"Sending...": "Sending...",
-	"Message sent": "Message sent"
+	"(Version #2020-09-30)": "(Version #2020-09-30)"
 }

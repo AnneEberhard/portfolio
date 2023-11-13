@@ -38,6 +38,15 @@ export class PortfolioComponent {
   linkLive:'https://ring-of-fire-ed7a0.web.app/',
   linkGit:'https://github.com/AnneEberhard/ringoffire',
   id : 'animateRing'
+}
+,{
+  image:'assets/img/anderland.png',
+  header: 'Anderland Books',
+  subheader: 'Angular | Javascript | HTML | CSS',
+  text:'The live Website for my little publishing company.',
+  linkLive:'https://anderlandbooks.com/',
+  linkGit:'https://github.com/AnneEberhard/AnderlandBooksAngular',
+  id : 'animateBooks'
 }]
 
 
