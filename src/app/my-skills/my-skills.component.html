@@ -2,8 +2,8 @@
 <section id="mySkills">
     <div class="mySkillsLeft paddingStandardLeft">
       <div class="skillsIcons" *ngFor="let skill of skillSet; let i = index" #skillIcon>
-        <img src="{{ skill.icon}}" alt="{{ skill.alt}}" id="{{ skill.title}}" *ngIf="animate"[@wiggle]>
-        <h4 *ngIf="animate" [@slideAndWiggle]>{{ skill.title}}</h4>
+        <img src="{{ skill.icon}}" alt="{{ skill.alt}}" id="{{ skill.title}}" *ngIf="animate"[@slide]>
+        <h4 *ngIf="animate" [@slide]>{{ skill.title}}</h4>
     </div>
     
     </div>

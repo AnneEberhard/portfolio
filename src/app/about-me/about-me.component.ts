@@ -24,7 +24,7 @@ onScroll(): void {
       const scrollPosition = window.scrollY;
       const element = document.getElementById('aboutMe');
       const elementPosition = element?.offsetTop ?? 0;
-      this.animate = scrollPosition > elementPosition - 500;
+      this.animate = scrollPosition > elementPosition - 600;
       console.log(this.animate);
       this.scrolling = false;    
     }, 300);

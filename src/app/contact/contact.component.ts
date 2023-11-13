@@ -54,7 +54,7 @@ export class ContactComponent implements AfterViewInit {
                 const scrollPosition = window.scrollY;
                 const element = document.getElementById('contact');
                 const elementPosition = element?.offsetTop ?? 0;
-                this.animate = scrollPosition > elementPosition - 400;
+                this.animate = scrollPosition > elementPosition - 600;
                 this.scrolling = false;
                 console.log(this.animate);
             }, 300);
