@@ -23,6 +23,9 @@ export class ContactComponent implements AfterViewInit {
     @ViewChild('sendButton') sendButtonElement!: ElementRef;
     @ViewChild('privacyContainerBox') privacyContainerBoxElement!: ElementRef;
     @ViewChild('privacyAlert') privacyAlertElement!: ElementRef;
+    @ViewChild('nameAlert') nameAlertElement!: ElementRef;
+    @ViewChild('emailAlert') emailAlertElement!: ElementRef;
+    @ViewChild('messageAlert') messageAlertElement!: ElementRef;
 
 
     nameField: any;
@@ -31,6 +34,9 @@ export class ContactComponent implements AfterViewInit {
     sendButton: any;
     privacyContainerBox: any;
     privacyAlert: any;
+    nameAlert: any;
+    emailAlert: any;
+    messageAlert: any;
 
     sendMessage = 'Send message'
 
@@ -40,26 +46,10 @@ export class ContactComponent implements AfterViewInit {
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
 
-    animate = false;
-    private scrolling = false;
 
     constructor(private pageService: PageService, private translate: TranslateService) { }
 
-    @HostListener('window:scroll', [])
 
-    onScroll(): void {
-        if (!this.scrolling) {
-            this.scrolling = true;
-            setTimeout(() => {
-                const scrollPosition = window.scrollY;
-                const element = document.getElementById('contact');
-                const elementPosition = element?.offsetTop ?? 0;
-                this.animate = scrollPosition > elementPosition - 600;
-                this.scrolling = false;
-                console.log(this.animate);
-            }, 300);
-        }
-    }
 
     ngAfterViewInit() {
         this.assignFields();
@@ -73,6 +63,9 @@ export class ContactComponent implements AfterViewInit {
         this.sendButton = this.sendButtonElement?.nativeElement;
         this.privacyContainerBox = this.privacyContainerBoxElement?.nativeElement;
         this.privacyAlert = this.privacyAlertElement?.nativeElement;
+        this.nameAlert = this.nameAlertElement?.nativeElement;
+        this.emailAlert = this.emailAlertElement?.nativeElement;
+        this.messageAlert = this.messageAlertElement?.nativeElement;
     }
 
 
@@ -110,7 +103,7 @@ export class ContactComponent implements AfterViewInit {
         data.append('email', this.emailField.value);
         data.append('message', this.messageField.value);
         return data;
-    }
+      }      
 
 
     disableFields() {
@@ -175,7 +168,7 @@ export class ContactComponent implements AfterViewInit {
         } else {
             return false;
         }
-    }
+      }
 
 
     checkFieldsFilled(field: any, id: string) {
@@ -233,24 +226,24 @@ export class ContactComponent implements AfterViewInit {
             target.classList.add('filled');
             this.hideAlert(id);
         }
-    }
+      }
 
 
-    checkEmail() {
+      checkEmail() {
         const emailValue = this.emailField.value;
         const atIndex = emailValue.indexOf('@');
         if (atIndex === -1) {
-            return false;
+            return false; 
         }
         const beforeAt = emailValue.substring(0, atIndex);
         const afterAt = emailValue.substring(atIndex + 1);
-        const regex = /^[a-zA-Z]{2,}$/;
+        const regex = /^[a-zA-Z]{2,}$/;   
         if (regex.test(beforeAt) && regex.test(afterAt)) {
-            return true;
+            return true; 
         } else {
-            return false;
+            return false; 
         }
-    }
+      }
 
 
     scrollToSection(sectionId: string) {

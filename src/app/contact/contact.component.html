@@ -1,9 +1,9 @@
-<section id="contact" *ngIf="animate" [@slide]>
-  <div class="contactLeftHeader">
+<section id="contact">
+  <div class="contactLeftHeader" data-aos="fade-left">
     <div class="line"></div>
-    <h2 translate>Contact</h2>
+    <h2 translate data-aos="fade-left">Contact</h2>
   </div>
-  <div class="contactContent">
+  <div class="contactContent" data-aos="fade-left">
   <div class="contactLeft">
 
       <h3 translate>Interested to learn more?</h3>
@@ -14,7 +14,7 @@
       </p>
    
   </div>
-  <div class="contactRight paddingStandardRight">
+  <div class="contactRight paddingStandardRight" data-aos="fade-left">
 
     <form #contactForm (submit)="sendMail($event)" ngNativeValidate>
       <input translate placeholder="Name" class="alignCenter" type="text" name="name" #nameField (input)="checkInputFields($event)" />

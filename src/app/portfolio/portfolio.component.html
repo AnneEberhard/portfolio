@@ -15,14 +15,13 @@
     *ngFor="let item of portfolio; let i = index"
     [ngClass]="{ swapOrder: i % 2 !== 0 }"
   >
-    <div class="portfolioLeft" *ngIf="animateArray[i]" [@slide] id="{{ item.id }}">
+    <div class="portfolioLeft" data-aos="fade-left" id="{{ item.id }}">
       <img src="{{ item.image }}" alt="screenshot" />
     </div>
     <div
       class="portfolioRight"
       [ngClass]="{ alignFlexEnd: i % 2 !== 0 }"
-      *ngIf="animateArray[i]"
-      [@slide]
+      data-aos="fade-left"
     >
       <h3>{{ item.header }}</h3>
       <span translate>{{ item.subheader }}</span>

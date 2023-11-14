@@ -2,13 +2,13 @@
 <section id="mySkills">
     <div class="mySkillsLeft paddingStandardLeft">
       <div class="skillsIcons" *ngFor="let skill of skillSet; let i = index" #skillIcon>
-        <img src="{{ skill.icon}}" alt="{{ skill.alt}}" id="{{ skill.title}}" *ngIf="animate"[@slide]>
-        <h4 *ngIf="animate" [@slide]>{{ skill.title}}</h4>
+        <img src="{{ skill.icon}}" alt="{{ skill.alt}}" id="{{ skill.title}}" data-aos="fade-down-left">
+        <h4 data-aos="fade-left">{{ skill.title}}</h4>
     </div>
     
     </div>
     <img class="mySkillsShadow" src="assets/img/shadows/petrol1.png">
-    <div class="mySkillsRight paddingStandardRight" *ngIf="animate" [@slide]>
+    <div class="mySkillsRight paddingStandardRight" data-aos="fade-left">
         <div class="mySkillsRightTop">
             <div class="mySkillsRightTopText">
               <h2 class="name" translate>My skills</h2>

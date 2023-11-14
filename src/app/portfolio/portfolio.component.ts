@@ -54,22 +54,4 @@ animateArray: boolean[] = [false, false, false];
 private scrolling = false;
 
 
-@HostListener('window:scroll', [])
-onScroll(): void {
-  if (!this.scrolling) {
-    this.scrolling = true;
-    setTimeout(() => {
-      const scrollPosition = window.scrollY;
-      this.animateArray = this.portfolio.map(item => this.checkVisibility(scrollPosition, item.id));
-      this.scrolling = false;
-    }, 300);
-  }
-}
-
-
-checkVisibility (scrollPosition: number, id: string) {
-  const element = document.getElementById(id);
-  const elementPosition = element?.offsetTop ?? 0;
-  return scrollPosition > elementPosition - 500;
-}
 }

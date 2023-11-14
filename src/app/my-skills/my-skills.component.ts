@@ -65,8 +65,6 @@ export class MySkillsComponent {
   },
   ]
 
-  animate = false;
-  private scrolling = false;
 
   constructor(private pageService: PageService) { }
 
@@ -74,20 +72,5 @@ export class MySkillsComponent {
     this.pageService.scrollToSection(sectionId);
   }
 
-  @HostListener('window:scroll', [])
-
-  onScroll(): void {
-    if (!this.scrolling) {
-      this.scrolling = true;
-      setTimeout(() => {
-        const scrollPosition = window.scrollY;
-        const element = document.getElementById('mySkills');
-        const elementPosition = element?.offsetTop ?? 0;
-        this.animate = scrollPosition > elementPosition - 500;
-        console.log(this.animate);
-        this.scrolling = false;
-      }, 300);
-    }
-  }
 
 }

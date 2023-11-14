@@ -33,6 +33,7 @@
     "@angular/cli": "^16.2.9",
     "@angular/compiler-cli": "^16.2.0",
     "@bartholomej/ngx-translate-extract": "^8.0.2",
+    "@types/aos": "^3.0.7",
     "@types/jasmine": "~4.3.0",
     "css-loader": "^6.8.1",
     "jasmine-core": "~4.6.0",
