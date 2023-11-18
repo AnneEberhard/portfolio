@@ -132,13 +132,13 @@ export class ContactComponent implements AfterViewInit {
 
 
     sendAnimation() {
-        this.sendMessage = this.translate.instant('sending'); // Übersetze die Nachricht während des Sendevorgangs
+        this.sendMessage = this.translate.instant('Sending...');
     }
 
     messageSend() {
-        this.sendMessage = this.translate.instant('messageSent'); // Übersetze die Nachricht nachdem die Nachricht gesendet wurde
+        this.sendMessage = this.translate.instant('Message sent'); // Übersetze die Nachricht nachdem die Nachricht gesendet wurde
         setTimeout(() => {
-            this.sendMessage = this.translate.instant('sendMessage'); // Setze die Nachricht zurück
+            this.sendMessage = this.translate.instant('Send message'); // Setze die Nachricht zurück
         }, 2000);
     }
 

@@ -45,7 +45,7 @@
 
 .line {
   height: 4px;
-  width: 100px;
+  width: 250px;
   background-color: #00bee8;
   z-index: 98;
 }
@@ -54,6 +54,19 @@
   position: absolute;
   right: 0;
   transform: rotate(180deg);
+}
+
+
+@media (max-width: 1200px) {
+  .line {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .line {
+    width: 100px;
+  }
 }
 
 @media (max-width: 800px) {
