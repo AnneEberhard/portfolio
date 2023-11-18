@@ -23,8 +23,16 @@
       <input translate placeholder="Email" class="alignCenter" type="text" name="email" #emailField (input)="checkInputFields($event)" />
       <div *ngIf="showEmailAlert" class="alert" translate>A valid email address is required</div>
     
-      <textarea translate placeholder="Message" name="message" #messageField (input)="checkInputFields($event)"></textarea>
-      <div *ngIf="showMessageAlert" class="alert" translate>Your message is empty</div>
+      <textarea [class]="hourglassClass"
+      translate
+      placeholder="Message"
+      name="message"
+      #messageField
+      (input)="checkInputFields($event)"></textarea>
+
+<div *ngIf="showMessageAlert" class="alert" translate>Your message is empty</div>
+
+
     
       <div id="privacyContainer">
         <div #privacyContainerBox id="privacyContainerBox" (click)="checkPrivacy()"></div>

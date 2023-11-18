@@ -38,13 +38,16 @@ export class ContactComponent implements AfterViewInit {
     emailAlert: any;
     messageAlert: any;
 
-    sendMessage = 'Send message'
+    sendMessage = 'Send message';
+    showHourglass = false;
+    hourglassClass = '';
 
     privacyChecked: boolean = false;
     showPrivacyAlert: boolean = false;
     showNameAlert: boolean = false;
     showEmailAlert: boolean = false;
     showMessageAlert: boolean = false;
+
 
 
     constructor(private pageService: PageService, private translate: TranslateService) { }
@@ -128,19 +131,29 @@ export class ContactComponent implements AfterViewInit {
         this.nameField.classList.remove('filled');
         this.emailField.classList.remove('filled');
         this.messageField.classList.remove('filled');
+        this.privacyContainerBox.innerHTML = '';
+        this.sendButton.disabled = true;
+        this.sendButton.classList.remove('hoverButton');
+        this.privacyChecked = false;
     }
 
 
     sendAnimation() {
+        this.showHourglass = true;
+        this.hourglassClass = 'hourglass-background';
         this.sendMessage = this.translate.instant('Sending...');
-    }
-
-    messageSend() {
-        this.sendMessage = this.translate.instant('Message sent'); // Übersetze die Nachricht nachdem die Nachricht gesendet wurde
+      }
+      
+      messageSend() {
+        this.showHourglass = false;
+        this.hourglassClass = '';
+        this.sendMessage = this.translate.instant('Message sent');
+      
         setTimeout(() => {
-            this.sendMessage = this.translate.instant('Send message'); // Setze die Nachricht zurück
+          this.sendMessage = this.translate.instant('Send message');
         }, 2000);
-    }
+      }
+      
 
 
     checkPrivacy() {
@@ -221,10 +234,12 @@ export class ContactComponent implements AfterViewInit {
         if (target.name === 'email') {
             if (this.checkEmail()) {
                 target.classList.add('filled');
+                target.classList.remove('fieldAlert');
                 this.hideAlert(id);
             } else {
                 this.showAlert(id);
                 target.classList.add('fieldAlert');
+                target.classList.remove('filled');
             };
         } else {
             target.classList.add('filled');
