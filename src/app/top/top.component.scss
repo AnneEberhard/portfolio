@@ -2,19 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .topLeft {
   display: flex;
   flex-direction: column;
-  img {
-    cursor: pointer;
-    width: 30px;
 
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 
   a {
     text-decoration: none;
@@ -44,15 +38,25 @@
 }
 
 .portfolioImage {
-  height: 300px;
-  width: 352px !important;
-  margin-left: 100px;
+  height: 580px;
+  margin-top: 34px;
+  margin-left: 34px;
+  z-index:999;
+
 }
 
 .topLeftBottomContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    cursor: pointer;
+    width: 30px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .line {
@@ -146,7 +150,7 @@
   right: 0;
   width: 100%;
   object-fit: cover;
-  z-index: -9;
+  z-index: -1;
   top: 350px;
 }
 
@@ -164,13 +168,7 @@
   .topLeft {
     display: flex;
     flex-direction: column;
-    img {
-      width: 30px;
-    }
   
-    a {
-      gap: 8px;
-    }
   }
 
   .topShadow {
@@ -179,14 +177,19 @@
   }
 
   .portfolioImage {
-    height: 250px;
-    width: 300px !important;
-    margin-left: 60px;
+    height: 400px;
   }
 
   .topLeftBottomContent {
     gap: 16px;
     padding-left: 16px;
+    img {
+      width: 30px;
+    }
+  
+    a {
+      gap: 8px;
+    }
   }
 
   .job {
@@ -227,7 +230,7 @@
   }
 
   #top {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .topLeftBottomContainer {
