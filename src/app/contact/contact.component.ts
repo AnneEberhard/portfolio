@@ -103,7 +103,7 @@ export class ContactComponent implements AfterViewInit {
         data.append('email', this.emailField.value);
         data.append('message', this.messageField.value);
         return data;
-      }      
+    }
 
 
     disableFields() {
@@ -168,7 +168,7 @@ export class ContactComponent implements AfterViewInit {
         } else {
             return false;
         }
-      }
+    }
 
 
     checkFieldsFilled(field: any, id: string) {
@@ -217,33 +217,45 @@ export class ContactComponent implements AfterViewInit {
     checkInputFields(event: Event) {
         const target = event.target as HTMLInputElement;
         const id = target.name.toString();
+
         if (target.name === 'email') {
             if (this.checkEmail()) {
                 target.classList.add('filled');
                 this.hideAlert(id);
+            } else {
+                this.showAlert(id);
+                target.classList.add('fieldAlert');
             };
         } else {
             target.classList.add('filled');
             this.hideAlert(id);
         }
-      }
+    }
 
 
-      checkEmail() {
+    checkEmail() {
+        const expression: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+        const email: string = this.emailField.value;
+        const result: boolean = expression.test(email);
+        return result;
+
+    }
+
+    checkEmail2() {
         const emailValue = this.emailField.value;
         const atIndex = emailValue.indexOf('@');
         if (atIndex === -1) {
-            return false; 
+            return false;
         }
         const beforeAt = emailValue.substring(0, atIndex);
         const afterAt = emailValue.substring(atIndex + 1);
-        const regex = /^[a-zA-Z]{2,}$/;   
+        const regex = /^[a-zA-Z]{2,}$/;
         if (regex.test(beforeAt) && regex.test(afterAt)) {
-            return true; 
+            return true;
         } else {
-            return false; 
+            return false;
         }
-      }
+    }
 
 
     scrollToSection(sectionId: string) {
