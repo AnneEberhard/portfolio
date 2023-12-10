@@ -31,18 +31,18 @@ export class PortfolioComponent {
     id : 'animateElPollo'
   }
 ,{
-  image:'assets/img/ringoffire.png',
-  header: 'Ring of Fire',
-  subheader: 'Angular | Firebase | Javascript | HTML | CSS',
-  text:'A simple card game employing Firebase as server and backend.',
-  linkLive:'https://ring-of-fire-ed7a0.web.app/',
-  linkGit:'https://github.com/AnneEberhard/ringoffire',
+  image:'assets/img/simpleCRM.png',
+  header: 'Simple CRM',
+  subheader: 'Angular | Firebase | Material Design | Typescript | HTML | SCSS',
+  text:'A simple customer management system employing Firebase as server and backend.',
+  linkLive:'https://simple-crm-7dc7e.web.app/sign-in',
+  linkGit:'https://github.com/AnneEberhard/simpleCRM',
   id : 'animateRing'
 }
 ,{
   image:'assets/img/anderland.png',
   header: 'Anderland Books',
-  subheader: 'Angular | Javascript | HTML | CSS',
+  subheader: 'Angular | Typescript | HTML | SCSS',
   text:'The live Website for my little publishing company.',
   linkLive:'https://anderlandbooks.com/',
   linkGit:'https://github.com/AnneEberhard/AnderlandBooksAngular',
@@ -50,7 +50,7 @@ export class PortfolioComponent {
 }]
 
 
-animateArray: boolean[] = [false, false, false];
+animateArray: boolean[] = [false, false, false, false];
 private scrolling = false;
 
 

@@ -101,12 +101,12 @@
 	"(Version #2020-09-30)": "(Version #2020-09-30)",
 	"I am": "I am",
 	"Let's chat": "Let's chat",
-	"Scroll down": "",
+	"Scroll down": "Scroll down",
 	"Sending...": "Sending...",
 	"Message sent": "Message sent",
 	"Send message": "Send message",
 	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.",
 	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.",
-	"A simple card game employing Firebase as server and backend.": "A simple card game employing Firebase as server and backend.",
+	"A simple customer management system employing Firebase as server and backend.": "A simple customer management system employing Firebase as server and backend.",
 	"The live Website for my little publishing company.": "The live Website for my little publishing company."
 }
