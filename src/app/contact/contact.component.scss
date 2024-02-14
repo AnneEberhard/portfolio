@@ -131,12 +131,13 @@
 
   p {
     font-size: 14px;
+    width: 100%;
   }
 }
 
 #privacyContainerBox {
   height: 24px;
-  width: 42px;
+  width: 24px;
   border: solid 2px #00bee8;
   cursor: pointer;
   &:hover {

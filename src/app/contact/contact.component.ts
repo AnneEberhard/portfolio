@@ -79,6 +79,32 @@ export class ContactComponent implements AfterViewInit {
             this.disableFields();
             this.sendAnimation();
             try {
+                const response = await fetch("send_mail.php", {
+                    method: "POST",
+                    body: data
+                });
+                if (response.ok) {
+                    this.messageSend();
+                    this.clearFields();
+                    this.enableFields();
+                } else {
+                    console.error(`HTTP error! status: ${response.status}`);
+                    this.enableFields();
+                    alert('Fehler beim Senden');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    }
+
+    async sendMail_backup(event: Event) {
+        event.preventDefault();
+        if (this.fieldsFilled()) {
+            const data = this.collectdata();
+            this.disableFields();
+            this.sendAnimation();
+            try {
                 const response = await fetch("https://formspree.io/f/xwkdzbgo", {
                     method: "POST",
                     body: data,
