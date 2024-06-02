@@ -36,6 +36,14 @@
           >GitHub</a
         >
       </div>
+      <div  *ngIf="item.linkBack || item.linkBackGit" class="portfolioButtons" [ngClass]="{ justifyFlexEnd: i % 2 !== 0 }">
+        <a target="_blank" href="{{ item.linkBack }}" class="buttonLive"
+          >Backend</a
+        >
+        <a target="_blank" href="{{ item.linkBackGit }}" class="buttonGit"
+          >BE GitHub</a
+        >
+      </div>
     </div>
   </div>
   <div class="shadowBox">

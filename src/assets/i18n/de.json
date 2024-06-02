@@ -1,6 +1,6 @@
 {
 	"About me": "Über mich",
-	"I am Dr. med. Anne Eberhard, MPH, a frontend developer. Coding has always been a passion of me which I an now able to pursue.": "Ich bin Dr. med. Anne Eberhard, MPH, eine Frontend-Entwicklerin. Coding war schon immer eine Leidenschaft von mir, der ich nun nachgehen kann.",
+	"I am Dr. med. Anne Eberhard, MPH, a software developer. Coding has always been a passion of me which I an now able to pursue.": "Ich bin Dr. med. Anne Eberhard, MPH, eine Software-Entwicklerin. Coding war schon immer eine Leidenschaft von mir, der ich nun nachgehen kann.",
 	"My academical background is a medical doctor and master of public health with a specialization in gynecology/obstretrics. I have extensive experience in the healthcare system - from patient care to public health, from health insurance to the pharmaceutical industry.": "Ich bin promovierte Fachärztin für Gynäkologie und Geburtshilfe sowie Master of Public Health. Ich verfüge über umfangreiche Erfahrungen im Gesundheitswesen - von der Patientenversorgung bis zum öffentlichen Gesundheitswesen, von der Krankenversicherung bis zur Pharmaindustrie.",
 	"To expand my knowledge, I successfully completed the developer academy as a frontend developer. I am also enrolled for the backend to become a full-stack developer. This means that I am ideally equipped for IT in the healthcare sector.": "Um mein Wissen zu erweitern, habe ich die Developer Academy erfolgreich als Frontend-Entwickler abgeschlossen. Ich bin auch für das Backend eingeschrieben, um Full-Stack-Entwickler zu werden. Somit bin ich für die IT im Gesundheitswesen bestens gerüstet.",
 	"Contact": "Kontakt",
@@ -45,7 +45,7 @@
 	"home": "Zuhause",
 	"checkmark": "Häkchen",
 	"My skills": "Meine Skills",
-	"The frontend skills I learned during my online course I have grown and employed in real-life projects.": "Die Frontend-Fähigkeiten, die ich in meinem Online-Kurs erlernt habe, habe ich ausgebaut und in realen Projekten eingesetzt.",
+	"The skills I learned during my online course I have grown and employed in real-life projects.": "Die Fähigkeiten, die ich in meinem Online-Kurs erlernt habe, habe ich ausgebaut und in realen Projekten eingesetzt.",
 	"Get in touch": "Kontakt",
 	"Please find below a sample of my work. Links lead either to the code on github or a live test.": "Unten finden Sie Beispiele meiner Arbeit. Links führen entweder zum Code auf Github oder zu einem Live-Test.",
 	"Privacy policy": "Datenschutzerklärung",
@@ -108,5 +108,7 @@
 	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Aufgabenmanager auf der Grundlage des Kanban-Systems. Ermöglicht die Erstellung von Aufgaben, die Zuweisung von Benutzern, Unteraufgaben und Kategorien sowie die Organisation in verschiedenen Bereichen.",
 	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "Ein Jump-and-Run-Spiel in objektorientierter Bauweise. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um die feindlichen Hühner zu besiegen.",
 	"A simple customer management system employing Firebase as server and backend.": "Ein einfaches Kundenverwaltungssystem mit Firebase als Server und Backend.",
-	"The live Website for my little publishing company.": "Die Live-Website meines Mini-Verlages."
+	"The live Website for my little publishing company.": "Die Webseite meines Mini-Verlages.",
+	"A Netflix clone, the backend being hostet on Google cloud.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet.",
+	"A simple chat app using websockets, being hostet on pythonanywhere.": "Eine einfache Chat-Anwendung mit Websockets, auf pythonanywhere gehostet."
 }

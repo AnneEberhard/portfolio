@@ -15,10 +15,12 @@ export class PortfolioComponent {
   portfolio = [{
     image:'assets/img/join.png',
     header: 'Join',
-    subheader: 'Javascript | HTML | CSS',
+    subheader: 'Javascript | HTML | CSS | Django | Pythonanywhere',
     text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.',
-    linkLive:'http://anne-eberhard.developerakademie.net/Join-Mono/index.html',
-    linkGit:'https://github.com/AnneEberhard/Join-Mono',
+    linkLive:'https://join.anne-eberhard.de/',
+    linkGit:'https://github.com/AnneEberhard/scrumboard_frontend',
+    linkBack: 'https://anne.pythonanywhere.com/admin/',
+    linkBackGit:'https://github.com/AnneEberhard/scrumboard_backend',
     id : 'animateJoin'
   },
   {
@@ -26,7 +28,7 @@ export class PortfolioComponent {
     header: 'El Pollo Loco',
     subheader: 'Javascript | HTML | CSS',
     text:'A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.',
-    linkLive:'http://anne-eberhard.developerakademie.net/ElPolloLoco/index.html',
+    linkLive:'https://elpolloloco.anne-eberhard.de/',
     linkGit:'https://github.com/AnneEberhard/ElPolloLoco',
     id : 'animateElPollo'
   }
@@ -35,7 +37,7 @@ export class PortfolioComponent {
   header: 'Simple CRM',
   subheader: 'Angular | Firebase | Material Design | Typescript | HTML | SCSS',
   text:'A simple customer management system employing Firebase as server and backend.',
-  linkLive:'https://simple-crm-7dc7e.web.app/sign-in',
+  linkLive:'https://simplecrm.anne-eberhard.de/sign-in',
   linkGit:'https://github.com/AnneEberhard/simpleCRM',
   id : 'animateRing'
 }
@@ -47,7 +49,27 @@ export class PortfolioComponent {
   linkLive:'https://anderlandbooks.com/',
   linkGit:'https://github.com/AnneEberhard/AnderlandBooksAngular',
   id : 'animateBooks'
-}]
+},
+{
+  image:'assets/img/anderlandflix.png',
+  header: 'Anderlandflix',
+  subheader: 'Angular | Typescript | HTML | SCSS| Django | Redis',
+  text:'A Netflix clone, the backend being hostet on Google cloud.',
+  linkLive:'https://anderlandflix.com/',
+  linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
+  linkBack: 'https://anne.pythonanywhere.com/admin/',
+  linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
+  id : 'animateJoin'
+},
+{
+  image:'assets/img/simpleChat.png',
+  header: 'Simple Chat',
+  subheader: 'Javascript | HTML | CSS | Material Design | Django | Redis',
+  text:'A simple chat app using websockets, being hostet on pythonanywhere.',
+  linkLive:'/',
+  linkGit:'https://github.com/AnneEberhard/websocket',
+  id : 'animateJoin'
+},]
 
 
 animateArray: boolean[] = [false, false, false, false];

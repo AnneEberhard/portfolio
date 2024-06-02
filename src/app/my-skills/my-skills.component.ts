@@ -24,6 +24,11 @@ export class MySkillsComponent {
     title: 'CSS',
   },
   {
+    icon: 'assets/img/icons/django-logo.png',
+    alt: 'django logo',
+    title: 'Django',
+  },
+  {
     icon: 'assets/img/icons/firebase_big.png',
     alt: 'firebase logo',
     title: 'Firebase',
@@ -47,6 +52,16 @@ export class MySkillsComponent {
     icon: 'assets/img/icons/matdes_big.png',
     alt: 'material design logo',
     title: 'Material design',
+  },
+  {
+    icon: 'assets/img/icons/python.png',
+    alt: 'python logo',
+    title: 'Python',
+  },
+  {
+    icon: 'assets/img/icons/redis-logo.png',
+    alt: 'redis logo',
+    title: 'Redis',
   },
   {
     icon: 'assets/img/icons/api_big.png',
