@@ -49,6 +49,11 @@ export class MySkillsComponent {
     title: 'JavaScript',
   },
   {
+    icon: 'assets/img/icons/linux2.png',
+    alt: 'linux logo',
+    title: 'Linux',
+  },
+  {
     icon: 'assets/img/icons/matdes_big.png',
     alt: 'material design logo',
     title: 'Material design',
