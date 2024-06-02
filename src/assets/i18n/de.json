@@ -105,10 +105,10 @@
 	"Sending...": "Sende...",
 	"Message sent": "Nachricht gesendet",
 	"Send message": "Nachricht senden",
-	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.": "Aufgabenmanager auf der Grundlage des Kanban-Systems. Ermöglicht die Erstellung von Aufgaben, die Zuweisung von Benutzern, Unteraufgaben und Kategorien sowie die Organisation in verschiedenen Bereichen.",
+	"Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas. The backend ist hostet at pythonanywhere.": "Aufgabenmanager auf der Grundlage des Kanban-Systems. Ermöglicht die Erstellung von Aufgaben, die Zuweisung von Benutzern, Unteraufgaben und Kategorien sowie die Organisation in verschiedenen Bereichen. Das Backend wird auf pythonanywhere gehostet.",
 	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "Ein Jump-and-Run-Spiel in objektorientierter Bauweise. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um die feindlichen Hühner zu besiegen.",
 	"A simple customer management system employing Firebase as server and backend.": "Ein einfaches Kundenverwaltungssystem mit Firebase als Server und Backend.",
 	"The live Website for my little publishing company.": "Die Webseite meines Mini-Verlages.",
 	"A Netflix clone, the backend being hostet on Google cloud.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet.",
-	"A simple chat app using websockets, being hostet on pythonanywhere.": "Eine einfache Chat-Anwendung mit Websockets, auf pythonanywhere gehostet."
+	"A simple chat app using websockets, being hostet on pythonanywhere. As an exception, backend and frontend are not separated.": "Eine einfache Chat-Anwendung mit Websockets, auf pythonanywhere gehostet. Backend und Frontend sind ausnahmesweise nicht getrennt."
 }

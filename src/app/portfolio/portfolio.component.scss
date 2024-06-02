@@ -123,6 +123,23 @@
   }
 }
 
+.buttonBack {
+  background-color: #4b47ff;
+  border: none;
+
+  &:hover {
+    background-color: #00bee8;
+  }
+}
+
+.buttonBackGit {
+  background-color: transparent;
+  border: solid 2px #4b47ff;
+  &:hover {
+    border: solid 2px  #00bee8;
+  }
+}
+
 .swapOrder {
   display: flex;
   flex-direction: row-reverse;

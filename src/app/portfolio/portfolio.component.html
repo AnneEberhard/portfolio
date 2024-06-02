@@ -37,10 +37,10 @@
         >
       </div>
       <div  *ngIf="item.linkBack || item.linkBackGit" class="portfolioButtons" [ngClass]="{ justifyFlexEnd: i % 2 !== 0 }">
-        <a target="_blank" href="{{ item.linkBack }}" class="buttonLive"
+        <a target="_blank" href="{{ item.linkBack }}" class="buttonBack"
           >Backend</a
         >
-        <a target="_blank" href="{{ item.linkBackGit }}" class="buttonGit"
+        <a target="_blank" href="{{ item.linkBackGit }}" class="buttonBackGit"
           >BE GitHub</a
         >
       </div>

@@ -16,7 +16,7 @@ export class PortfolioComponent {
     image:'assets/img/join.png',
     header: 'Join',
     subheader: 'Javascript | HTML | CSS | Django | Pythonanywhere',
-    text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas.',
+    text:'Task manager based on the Kanban system. Allows for creating tasks, assigning users, subtasks and categories as well as organizing them into different areas. The backend ist hostet at pythonanywhere.',
     linkLive:'https://join.anne-eberhard.de/',
     linkGit:'https://github.com/AnneEberhard/scrumboard_frontend',
     linkBack: 'https://anne.pythonanywhere.com/admin/',
@@ -57,7 +57,7 @@ export class PortfolioComponent {
   text:'A Netflix clone, the backend being hostet on Google cloud.',
   linkLive:'https://anderlandflix.com/',
   linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
-  linkBack: 'https://anne.pythonanywhere.com/admin/',
+  linkBack: 'https://backend.anderlandflix.com/',
   linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
   id : 'animateJoin'
 },
@@ -65,7 +65,7 @@ export class PortfolioComponent {
   image:'assets/img/simpleChat.png',
   header: 'Simple Chat',
   subheader: 'Javascript | HTML | CSS | Material Design | Django | Redis',
-  text:'A simple chat app using websockets, being hostet on pythonanywhere.',
+  text:'A simple chat app using websockets, being hostet on pythonanywhere. As an exception, backend and frontend are not separated.',
   linkLive:'/',
   linkGit:'https://github.com/AnneEberhard/websocket',
   id : 'animateJoin'
