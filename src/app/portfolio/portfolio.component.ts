@@ -66,7 +66,7 @@ export class PortfolioComponent {
   header: 'Simple Chat',
   subheader: 'Javascript | HTML | CSS | Material Design | Django | Redis',
   text:'A simple chat app using websockets, being hostet on pythonanywhere. As an exception, backend and frontend are not separated.',
-  linkLive:'/',
+  linkLive:'https://annessimplechat.pythonanywhere.com/',
   linkGit:'https://github.com/AnneEberhard/websocket',
   id : 'animateJoin'
 },]
