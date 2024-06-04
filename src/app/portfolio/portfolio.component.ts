@@ -21,6 +21,7 @@ export class PortfolioComponent {
     linkGit:'https://github.com/AnneEberhard/scrumboard_frontend',
     linkBack: 'https://anne.pythonanywhere.com/admin/',
     linkBackGit:'https://github.com/AnneEberhard/scrumboard_backend',
+    link2: 'BE GitHub',
     id : 'animateJoin'
   },
   {
@@ -59,15 +60,18 @@ export class PortfolioComponent {
   linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
   linkBack: 'https://backend.anderlandflix.com/',
   linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
+  link2: 'BE GitHub',
   id : 'animateJoin'
 },
 {
   image:'assets/img/simpleChat.png',
   header: 'Simple Chat',
   subheader: 'Javascript | HTML | CSS | Material Design | Django | Redis',
-  text:'A simple chat app using websockets, being hostet on pythonanywhere. As an exception, backend and frontend are not separated.',
+  text:'A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.',
   linkLive:'https://annessimplechat.pythonanywhere.com/',
-  linkGit:'https://github.com/AnneEberhard/websocket',
+  linkGit:'https://github.com/AnneEberhard/Django-ChatApp',
+  linkBackGit:'https://github.com/AnneEberhard/websocket',
+  link2: 'Websocket',
   id : 'animateJoin'
 },]
 
