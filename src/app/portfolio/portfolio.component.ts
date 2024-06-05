@@ -58,7 +58,7 @@ export class PortfolioComponent {
   text:'A Netflix clone, the backend being hostet on Google cloud.',
   linkLive:'https://anderlandflix.com/',
   linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
-  linkBack: 'https://backend.anderlandflix.com/',
+  linkBack: 'https://backend.anderlandflix.com/admin/',
   linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
   link2: 'BE GitHub',
   id : 'animateJoin'
