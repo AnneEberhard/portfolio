@@ -66,7 +66,7 @@ export class PortfolioComponent {
 {
   image:'assets/img/simpleChat.png',
   header: 'Simple Chat',
-  subheader: 'Javascript | HTML | CSS | Material Design | Django | Redis',
+  subheader: 'Javascript | HTML | CSS | Material Design | Django ',
   text:'A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.',
   linkLive:'https://annessimplechat.pythonanywhere.com/',
   linkGit:'https://github.com/AnneEberhard/simple_chat',
