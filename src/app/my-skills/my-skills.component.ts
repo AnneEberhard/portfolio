@@ -79,6 +79,11 @@ export class MySkillsComponent {
     title: 'Scrum',
   },
   {
+    icon: 'assets/img/icons/sql.png',
+    alt: 'sql logo',
+    title: 'SQL',
+  },
+  {
     icon: 'assets/img/icons/ts_big.png',
     alt: 'typescript logo',
     title: 'TypeScript',
