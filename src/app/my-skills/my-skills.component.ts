@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 import { PageService } from '../page.service';
 import { fadeIn } from '../animations/fade-in.animation';
 import { slideAndWiggle } from '../animations/slide-and-wiggle.animation';

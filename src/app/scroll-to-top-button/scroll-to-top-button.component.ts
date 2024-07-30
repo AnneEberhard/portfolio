@@ -16,11 +16,9 @@ export class ScrollToTopButtonComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-
   @HostListener('window:scroll', [])
   onScroll(): void {
     const scrollPosition = window.scrollY;
     this.showScrollTopButton = scrollPosition > this.scrollThreshold;
   }
 }
-
