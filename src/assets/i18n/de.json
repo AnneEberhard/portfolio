@@ -109,6 +109,6 @@
 	"A Jump-and-Run game built in an object-oriented design. Help Pepe gather coins and salsa bottles to defeat the enemy chickens.": "Ein Jump-and-Run-Spiel in objektorientierter Bauweise. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um die feindlichen Hühner zu besiegen.",
 	"A simple customer management system employing Firebase as server and backend.": "Ein einfaches Kundenverwaltungssystem mit Firebase als Server und Backend.",
 	"The live Website for my little publishing company.": "Die Webseite meines Mini-Verlages.",
-	"A Netflix clone, the backend being hostet on Google cloud.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet.",
+	"A Netflix clone, the backend being hostet on Google cloud. Server currently not running.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet. Server derzeit nicht in Betrieb.",
 	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "Eine einfache Chat-Applikation gehostet auf pythonanywhere. Ausnahmsweise sind Backend und Frontend nicht voneinander getrennt. Eine nicht gehostete Alternative mit Websockets ist auf GitHub verfügbar."
 }

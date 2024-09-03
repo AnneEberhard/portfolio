@@ -51,18 +51,18 @@ export class PortfolioComponent {
   linkGit:'https://github.com/AnneEberhard/AnderlandBooksAngular',
   id : 'animateBooks'
 },
-{
-  image:'assets/img/anderlandflix.png',
-  header: 'Anderlandflix',
-  subheader: 'Angular | Typescript | HTML | SCSS| Django | Redis | SQL',
-  text:'A Netflix clone, the backend being hostet on Google cloud.',
-  linkLive:'https://anderlandflix.com/',
-  linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
-  linkBack: 'https://backend.anderlandflix.com/admin/',
-  linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
-  link2: 'BE GitHub',
-  id : 'animateJoin'
-},
+//{
+//  image:'assets/img/anderlandflix.png',
+//  header: 'Anderlandflix',
+//  subheader: 'Angular | Typescript | HTML | SCSS| Django | Redis | SQL',
+//  text:'A Netflix clone, the backend being hostet on Google cloud. Server currently not running.',
+//  linkLive:'https://anderlandflix.com/',
+//  linkGit:'https://github.com/AnneEberhard/videoflix_frontend',
+//  linkBack: 'https://backend.anderlandflix.com/admin/',
+//  linkBackGit:'https://github.com/AnneEberhard/videoflix_backend',
+//  link2: 'BE GitHub',
+//  id : 'animateJoin'
+//},
 {
   image:'assets/img/simpleChat.png',
   header: 'Simple Chat',
