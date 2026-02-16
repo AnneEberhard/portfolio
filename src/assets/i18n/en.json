@@ -110,5 +110,8 @@
 	"A simple customer management system employing Firebase as server and backend.": "A simple customer management system employing Firebase as server and backend.",
 	"The live Website for my little publishing company.": "The live Website for my little publishing company.",
 	"A Netflix clone, the backend being hostet on Google cloud. Server currently not running.": "A Netflix clone, the backend being hostet on Google cloud. Server currently not running.",
-	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub."
+	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.",
+	"A plain Javascript website with a Firebase backend (members only).": "A plain Javascript website with a Firebase backend (members only).",
+	"An angular frontend end and django backend hosted on pythonanywhere (members only).": "An angular frontend end and django backend hosted on pythonanywhere (members only).",
+	"A plain JS website for Author Anna K. Thomas.": "A plain JS website for Author Anna K. Thomas."
 }

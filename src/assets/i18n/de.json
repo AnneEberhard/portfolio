@@ -110,5 +110,8 @@
 	"A simple customer management system employing Firebase as server and backend.": "Ein einfaches Kundenverwaltungssystem mit Firebase als Server und Backend.",
 	"The live Website for my little publishing company.": "Die Webseite meines Mini-Verlages.",
 	"A Netflix clone, the backend being hostet on Google cloud. Server currently not running.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet. Server derzeit nicht in Betrieb.",
-	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "Eine einfache Chat-Applikation gehostet auf pythonanywhere. Ausnahmsweise sind Backend und Frontend nicht voneinander getrennt. Eine nicht gehostete Alternative mit Websockets ist auf GitHub verfügbar."
+	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "Eine einfache Chat-Applikation gehostet auf pythonanywhere. Ausnahmsweise sind Backend und Frontend nicht voneinander getrennt. Eine nicht gehostete Alternative mit Websockets ist auf GitHub verfügbar.",
+	"A plain Javascript website with a Firebase backend (members only).": "Eine einfache Javascript-Website mit einem Firebase-Backend (nur für Mitglieder).",
+	"An angular frontend end and django backend hosted on pythonanywhere (members only).": "Ein Angular-Frontend und ein Django-Backend, gehostet auf PythonAnywhere (nur für Mitglieder).",
+	"A plain JS website for Author Anna K. Thomas.": "Eine einfache JS-Website für die Autorin Anna K. Thomas."
 }
