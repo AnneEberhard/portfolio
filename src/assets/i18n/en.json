@@ -112,6 +112,8 @@
 	"A Netflix clone, the backend being hostet on Google cloud. Server currently not running.": "A Netflix clone, the backend being hostet on Google cloud. Server currently not running.",
 	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.",
 	"A plain Javascript website with a Firebase backend (members only).": "A plain Javascript website with a Firebase backend (members only).",
-	"An angular frontend end and django backend hosted on pythonanywhere (members only).": "An angular frontend end and django backend hosted on pythonanywhere (members only).",
-	"A plain JS website for Author Anna K. Thomas.": "A plain JS website for Author Anna K. Thomas."
+	"An angular frontend end and django backend hosted on pythonanywhere, depicting a dynamic family tree with the possibility of discussions (members only).": "An angular frontend end and django backend hosted on pythonanywhere, depicting a dynamic family tree with the possibility of discussions (members only).",
+	"A plain JS website for Author Anna K. Thomas, in German andn English.": "A plain JS website for Author Anna K. Thomas.",
+	"SOFTWARE DEVELOPER": "SOFTWARE DEVELOPER",
+	"Please find below a sample of my work. Links of the first two examples lead either to the code on Github or a live test. Links of the latter examples lead to Github or the live Webpages, in some cases members only access.": "Please find below a sample of my work. Links of the first two examples lead either to the code on Github or a live test. Links of the latter examples lead to Github or the live Webpages, in some cases members only access."
 }

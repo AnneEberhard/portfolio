@@ -44,7 +44,7 @@ export class PortfolioComponent {
   }
     , {
     image: 'assets/img/laufklub.png',
-    header: 'Laufklub-Website',
+    header: 'Laufklub Hameln',
     subheader: 'Javascript | HTML | CSS| Firebase',
     text: 'A plain Javascript website with a Firebase backend (members only).',
     linkLive: 'https://laufklub-hameln.de',
@@ -53,9 +53,9 @@ export class PortfolioComponent {
   },
   {
     image: 'assets/img/kempeundco.png',
-    header: 'Family Website',
+    header: 'Kempe und Co',
     subheader: 'Angular | Typescript | HTML | SCSS | Django | Python | SQL',
-    text: 'An angular frontend end and django backend hosted on pythonanywhere (members only).',
+    text: 'An angular frontend end and django backend hosted on pythonanywhere, depicting a dynamic family tree with the possibility of discussions (members only).',
     linkLive: 'https://kempeundco.de',
     linkGit: 'https://github.com/AnneEberhard/kempeUndCo_frontend',
     linkBack: 'https://kempeundco.pythonanywhere.com/admin/',
@@ -65,9 +65,9 @@ export class PortfolioComponent {
   }
     , {
     image: 'assets/img/annakthomas.png',
-    header: 'Autorenwebsite',
+    header: 'Anna K. Thomas',
     subheader: 'Javascript | HTML | CSS ',
-    text: 'A plain JS website for Author Anna K. Thomas.',
+    text: 'A plain JS website for Author Anna K. Thomas, in German andn English.',
     linkLive: 'https://annakthomas.de',
     linkGit: 'https://github.com/AnneEberhard/AnnaKThomas',
     id: 'animateAnna'

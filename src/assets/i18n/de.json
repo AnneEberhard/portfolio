@@ -111,7 +111,9 @@
 	"The live Website for my little publishing company.": "Die Webseite meines Mini-Verlages.",
 	"A Netflix clone, the backend being hostet on Google cloud. Server currently not running.": "Ein Netflix-Klon, das Backend in der Google-Cloud gehostet. Server derzeit nicht in Betrieb.",
 	"A simple chat app hostet on pythonanywhere. As an exception, backend and frontend are not separated. A not-hosted alternative using websockets is available on GitHub.": "Eine einfache Chat-Applikation gehostet auf pythonanywhere. Ausnahmsweise sind Backend und Frontend nicht voneinander getrennt. Eine nicht gehostete Alternative mit Websockets ist auf GitHub verfügbar.",
-	"A plain Javascript website with a Firebase backend (members only).": "Eine einfache Javascript-Website mit einem Firebase-Backend (nur für Mitglieder).",
-	"An angular frontend end and django backend hosted on pythonanywhere (members only).": "Ein Angular-Frontend und ein Django-Backend, gehostet auf PythonAnywhere (nur für Mitglieder).",
-	"A plain JS website for Author Anna K. Thomas.": "Eine einfache JS-Website für die Autorin Anna K. Thomas."
+	"A plain Javascript website with a Firebase backend (members only).": "Eine Javascript-Webseite mit einem Firebase-Backend (nur für Mitglieder).",
+	"An angular frontend end and django backend hosted on pythonanywhere, depicting a dynamic family tree with the possibility of discussions (members only).": "Ein Angular-Frontend und ein Django-Backend, gehostet auf PythonAnywhere, Darstellung eines dynamischen Stammbaums mit der Möglichkeit für Diskussionen (nur für Mitglieder).",
+	"A plain JS website for Author Anna K. Thomas, in German andn English.": "Eine Javascript-Webseite für die Autorin Anna K. Thomas, auf deutsch und englisch.",
+	"SOFTWARE DEVELOPER": "SOFTWARE DEVELOPERIN",
+	"Please find below a sample of my work. Links of the first two examples lead either to the code on Github or a live test. Links of the latter examples lead to Github or the live Webpages, in some cases members only access.": "Nachfolgend finden Sie einige Beispiele meiner Arbeit. Die Links der ersten beiden Beispiele führen entweder zum Code auf Github oder zu einem Live-Test. Die Links der letzten Beispiele führen zu Github oder zu den Live-Webseiten, die in einigen Fällen nur für Mitglieder zugänglich sind."
 }
